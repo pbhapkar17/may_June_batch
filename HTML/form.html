@@ -1,0 +1,36 @@
+<form>
+   <label>Name</label> <br>
+   <input type="text" name="myName" value="om" id="Mname" minlength="5" maxlength="20" 
+    required autocomplete="off" pattern="[a-zA-Z ]+"><br>
+   <input type="number" name = "mobno" id="number"><br>
+   <input type="text" pattern="[0-9]{10}" minlength="10" maxlength="10">mob nobr <br>
+   <input type="text" pattern="[A-Z]{4}[0-9]{4}{@}">password<br >
+   <!-- AJAY9999, POON6767@-->
+   <input type="text" pattern="(?=.*[a-zA-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]+">pass<br>
+   <input type="text" pattern="[A-Za-z]+[@$&]{1}[0-9a-zA-Z]+" >pass2<br>
+   <input type="checkbox" id="ckbox"><br>
+   <input type="radio"><br>
+   <input type="date"><br>
+   <input type="file"><br>
+   <input type="button" value="Submit"><br>
+   <input type="password"><br>
+   <input type="search"><br><br>
+   <input value="Patil" type="text" name="surName"><br>
+   <!-- {surName:Patil} -->
+   <input value="" type="text" placeholder="Enter ur Name... "><br>
+   <p>&#128512;</p>
+
+   <!-- Radio : for single selection only e.g category,gender etc -->
+   Gender: <br>
+   <input type="radio" name="gender" value="male"> Male
+   <input type="radio" name="gender" value="female"> Female
+   <input type="radio" name="gender" value="other"> Other <br>
+   <!-- {"gender": m/f}  -->
+
+   <!-- Checkbox: multiselection e.g Hobbies, specilities, cousine,countries -->
+   Hobbies: <br>
+   Painting <input type="checkbox" value="Painting"> 
+   Swimming <input type="checkbox" value="Swimming"> 
+   Bicycle Riding <input type="checkbox" value="Ridding"> <br><br>
+   <button>Form Submit</button>
+</form>

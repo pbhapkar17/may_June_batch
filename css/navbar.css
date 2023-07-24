@@ -1,0 +1,26 @@
+.navbar-container{
+    background-color: #ea9bb6;
+    font-size: 25px;
+    padding: 5px 5px;
+}
+
+div.navbar-container a{
+    text-decoration: none;
+}
+
+/* a {
+    text-decoration: none; 
+} */
+
+div.main div{
+    color:blue
+}
+/* .main2{
+    color:purple   
+} */
+
+.name{
+    color: #ea9bb6;
+    font-family: Arial;
+    cursor: progress;
+}

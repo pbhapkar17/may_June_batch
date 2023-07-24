@@ -1,0 +1,31 @@
+
+/* h2{
+    color : pink;
+} */
+
+/* p{
+    color:blueviolet
+} */
+
+/*externel css: 1.Using element selector
+                2.Using class selector : 
+                syntax .(period operator)classname { pro:val} 
+                */
+
+.container {
+    color: brown;
+}
+.address-container{
+    color: tomato;
+    background-color: #efe4e0;
+    font-size: 30px;
+    width: 240px;
+    height: 43px;
+    padding: 22px;
+    border: 1px solid;
+    border-radius: 41px;
+}
+.para{
+    color: rgb(51, 255, 0);
+    font-size: 30px;
+}

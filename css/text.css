@@ -1,0 +1,47 @@
+.text-prop{
+    border: 1px solid black;
+    width: 250px;
+    text-align: center;
+    margin: auto;
+}
+.text-prop1{
+    margin-left: 60px;
+}
+.text-shadow-prop{
+    font-size: 60px;
+    text-shadow: 3px 4px 5px red;   /* horizontal s, ver s, blur effect, color*/
+}
+
+.box-shadow-prop{
+    box-shadow: 5px 5px 13px #504752;
+    width: 100px;
+    height: 100px;
+    background-color: cadetblue;
+    border: 1px solid black;
+}
+.text-transform-prop{
+    text-transform: capitalize; /*uppercase,lowercase,capitalize*/
+}
+.txt-overflw{
+ width: 40px;
+ border: 1px solid blue;
+ overflow: hidden;
+ text-overflow: ellipsis;  /*text -overflow we have to use with overflow property elipsis/clip*/
+}
+.overflw{
+    width: 300px;
+    overflow: auto; /*overflow : scroll/auto/visible/hidden/clip
+                     overflow-x /overflow-y*/
+    height: 300px;
+}
+
+.word-prop{
+    width: 91px;
+    border: 1px solid black;
+    word-wrap: break-word;
+}
+.word-prop1{
+    width: 91px;
+    border: 1px solid black;
+    word-break:break-all;  /* word-break:breal-all/keep-all/break-word*/
+}

@@ -1,0 +1,29 @@
+/* *{
+    color: blue;
+    font-size: 30px;
+} */
+div h2:hover{
+    background-color: aquamarine;
+    width: 200px;
+}
+
+p:hover{
+    background-color: blueviolet;
+    font-size: 40px;
+}
+
+a:active{
+    color: violet;
+}
+
+h4::first-letter{
+    color: yellow;
+    font-size: 50px;
+}
+h5::first-line{
+    color: turquoise;
+}
+h6::selection{
+    color: rgb(240, 40, 13);
+    background-color: yellow;
+}

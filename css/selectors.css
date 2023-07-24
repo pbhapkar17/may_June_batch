@@ -1,0 +1,23 @@
+#div1{
+color: pink;
+}
+
+#div2{
+    color: yellow;
+}
+
+div p{
+    background-color: aquamarine;
+}
+
+span > h1{
+background-color: blueviolet;
+}
+
+h4 + h2{
+background-color: yellowgreen;
+}
+
+p ~ h3{
+    background-color: red;
+}

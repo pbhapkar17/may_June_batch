@@ -1,0 +1,119 @@
+.navbar {
+    background-color: yellowgreen;
+    overflow: hidden;
+    
+}
+.parent-container{
+    background-image: url("nature.jpg");
+    background-repeat: no-repeat;
+    height: 100%;
+    background-size: cover;
+}
+
+.anchor-css {
+    text-decoration: none;
+    font-size: 32px;
+    padding: 6px 9px;
+    color: brown;
+    float: left;
+}
+
+/* .navbar a{
+    text-decoration: none;
+    font-size: 32px;
+    padding: 6px 9px;
+    color: brown;
+} */
+.dropdown{
+    float: left;
+   
+}
+
+.dropdown-btn {
+    font-size: 26px;
+    color: brown;
+    background-color: rgb(30, 228, 122);
+    border: none;
+    position: relative;
+    top: 1px;
+    padding: 8px 9px;
+}
+
+.dopdown-content {
+    position: absolute;
+    background-color: antiquewhite;
+    min-width: 156px;
+    display: none;
+    left: 294px;
+    top: 53px;
+    z-index: 1;
+}
+
+.dopdown-content a{
+    text-decoration: none;
+    display: block;
+    text-align: center;
+    padding: 5px 5px;
+}
+.dropdown:hover .dopdown-content{
+    display: block;
+}
+.dopdown-content a:hover{
+    background-color: aqua;
+}
+
+.anchor-css:hover{
+    background-color: aqua;
+}
+
+.dropdown-btn:hover{
+    background-color: aqua;
+}
+.form-container{
+    border: 1px solid black;
+    position: relative;
+    width: 365px;
+    padding: 11px 10px;
+    background-color: aliceblue;
+    font-size: 21px;
+    font-family: monospace;
+    height: 292px;
+    margin-left: 120px;
+    background-image: url('tiger.jpg');
+    background-repeat: no-repeat;
+    opacity: 1;
+    background-size: cover;
+
+}
+
+.form-container:hover{
+    opacity: 0.7;
+}
+.sbt-btn{
+    background-color: #9C27B0;
+    position: relative;
+    text-align: center;
+    top: 22px;
+    padding: 5px 5px;
+    border-radius: 15px;
+    font-size: 19px;
+    border: none;
+}
+.form-css{
+    text-align: center;
+    margin: auto;
+}
+.img-css{
+    position: absolute;
+    top: 94px;
+    left: 524px;
+    height: 200px;
+    width: 249px;
+    opacity: 1;
+}
+.img-css:hover{
+    opacity: 0.7;
+}
+.lable-css{
+    color: chartreuse;
+}

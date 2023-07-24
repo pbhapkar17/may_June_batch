@@ -1,0 +1,22 @@
+.first-div{
+    border: 1px solid black;
+    height: 200px;
+    width: 200px;
+    background-color: aqua;
+    position: relative;
+    z-index: 1;   /* +1 to take element in front -1 will take element behind
+                       top,left,right,bottom z-index, will not work untill 
+                       and unless we add position property having value apart from static*/
+}
+.sec-div{
+    border: 1px solid black;
+    height: 100px;
+    width: 100px;
+    background-color: rgb(38, 255, 0);
+    position: absolute;
+    top: 151px;
+    left: 140px;
+}
+.img-container{
+    float: left;
+}
