@@ -70,3 +70,13 @@ console.log(typeof(studentData));
 let list = ['i10','volvo','swift','audi'];
 console.log(list);
 console.log(typeof(list));
+
+
+let savingAmount = BigInt('9999999999999999');
+let amount2= 9999999999999999n;
+console.log(amount2);
+console.log(savingAmount);
+
+let r = '99999999999999999';
+console.log(r);
+
