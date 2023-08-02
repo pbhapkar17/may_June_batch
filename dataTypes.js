@@ -71,6 +71,10 @@ let list = ['i10','volvo','swift','audi'];
 console.log(list);
 console.log(typeof(list));
 
+let h = 10.0;
+let l = h.toString();
+console.log('boolean value',l);
+console.log('boolean value',typeof(l));
 
 let savingAmount = BigInt('9999999999999999');
 let amount2= 9999999999999999n;
