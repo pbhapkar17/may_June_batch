@@ -55,8 +55,8 @@ console.log( u === w);// v+ dt , so false
 console.log('>',k > j);
 console.log('>',k < j);
 
-console.log( '!=', u != w);
-console.log( '!==', u !== w);
+console.log( '!=', u != w);  //->>value not equal =true , values are equal >>false
+console.log( '!==', u !== w); //value as well as dt
 
 console.log( '>=', j >= k);
 console.log( '<=', j <= k);
