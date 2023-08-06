@@ -72,7 +72,7 @@ for (let num of numbers) {
     console.log(num);
 }
 
-
+//do while loop
 let h = 10;
 
 do {
