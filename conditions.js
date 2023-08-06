@@ -24,6 +24,7 @@ else{
     console.log('a is big'); 
 }
 
+//ternory operator
 a > b ? console.log('a is big') :  console.log('a is small');
 
 //else-if -If want to check more than 2 conditions 
@@ -63,4 +64,17 @@ switch (color) {
     default:
         console.log('no match');
        
+}
+
+//nested if : if inside if 
+
+let x = 50;
+let y = 180;
+
+if(x < 100){
+     if(x < y){
+          if(y < 100){
+             console.log(y);
+          }
+     }
 }
