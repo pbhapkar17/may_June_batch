@@ -11,8 +11,9 @@
 //homogenous array
 let cars = ['i20', 'i10', 'swift', 'jaguar', 'Audi'];
 
-//length operator:will give length of aaray
-
+//length operator: string and array -->> will give length of aaray
+let value = cars[2];
+console.log('value',value);
 console.log(cars.length);
 console.log(cars[0]);
 console.log(cars[1]);
@@ -21,7 +22,7 @@ console.log(cars[3]);
 console.log(cars[4]);
 console.log(cars[7]);//undefined
 
-//for loop
+//loops: for loop , for in,for of, forEach(array ittration)
 //for(statment;condition;++/--)
 //i++ => i = i + 1
 
