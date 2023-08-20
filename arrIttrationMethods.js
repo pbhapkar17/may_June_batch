@@ -40,3 +40,53 @@ function test() {
 
     console.log('empolyeeNames', empolyeeNames);
 }
+
+function cascading(){
+console.log('casading calling....');
+test();
+}
+
+
+
+function addition (){ //parameterless func
+    let result = 30 + 60;
+    console.log(result); //90
+}
+let a = 'poonam' ;
+let result1 = function addition1(){
+  return  a;  //return will return value,
+  console.log('poonam....');//unreachable code block
+}
+
+function substaraction(a,b){  //a,b parametres/argument parametrised fun
+  return a-b;
+}
+
+ let res = substaraction(150,90);
+
+//normal fun
+//  let result3 = function multi(){
+//          return 90;
+//  }
+
+//  let result3 = function (){
+//     return 90;
+// }
+
+// let result3 =  ()=>{
+//     return 90;
+// }
+
+let result3 = ()=>90;
+
+console.log(result3);
+
+
+let num = [10,20,30,50,6,999];
+let num3= [];
+num.forEach(item =>{
+  if(item != 50){
+    num3.push(item)
+  }
+})
+console.log(num3);
