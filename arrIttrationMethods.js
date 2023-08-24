@@ -23,7 +23,7 @@ function test() {
     //code block
     //map
     let employee = [
-        { name: 'poonam', age: 30 },
+        { name: 'poonam', age: 80 },
         { name: 'pooja', age: 30 },
         { name: 'om', age: 30 },
         { name: 'jay', age: 30 }

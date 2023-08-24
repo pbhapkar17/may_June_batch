@@ -61,14 +61,14 @@ let carDetails5 = {
 console.log(carDetails5.dis());
 
 function test(){
-    this.test2()
+    test2()
 }
 
 function test2(){
     console.log('test2....');
 }
 
-console.log(this.test());
+console.log(test());  //cascading calling function
 
 
 // The "this" keyword is used in JavaScript to refer to the current object or context in which the code is being executed.
@@ -78,3 +78,35 @@ console.log(this.test());
 // Constructor functions - When used inside a constructor function, "this" refers to the object being created by that constructor. It allows setting properties and invoking methods specific to the newly created object.
 // Callback functions - When a function is used as a callback function, the value of "this" inside the callback function depends on how the function is invoked. It can vary based on the context in which the callback function is called.
 // Note: It's important to understand that the value of "this" is not determined by where the function is defined but rather by how the function is invoked.
+
+//callBackfunction : in function we can pass another func as a parameter
+
+function addition(a,b,sub){
+   console.log(a,b,sub);
+}
+
+function substaraction(){
+   10 //50
+}
+
+console.log(addition(10,20,substaraction)); //callBack fun
+
+
+ function add4(add1,add2){
+     return (add1+add2); 
+    }
+ 
+     console.log(add4())
+
+
+     let emp = [
+        { name: 'poonam', age: 80 },
+        { name: 'pooja', age: 30 },
+        { name: 'om', age: 30 },
+        { name: 'jay', age: 30 },
+        [40,20,[80,800,8000,[9,99,63]]]
+    ]
+
+    console.log(emp);
+    console.log(emp[0].name);
+    console.log(emp[4][2][3][0]);
