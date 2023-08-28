@@ -1,5 +1,5 @@
 //diff between let , var , const
-
+let amount = 600;
 //scope difference: 
 //var:function level scope and let,const :block scope
 function learningLetVarConstDifference() {
@@ -76,7 +76,9 @@ reDeclaration();
 function reDeclaration(){
    let city = 'pune';  //Redeclaration is not possible with variable having let keyword.
    //let city ='mopj';
-
+   let amount = 888
+   amount = 4444;
+   console.log(amount);
    var num = 9000;
    var num = 8000000; //Redeclaration of variable having var keyword is possible .
    console.log(num);
@@ -86,3 +88,8 @@ function reDeclaration(){
 }
 
 
+
+function amountCal(){
+    console.log(amount);
+}
+amountCal()
