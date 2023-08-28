@@ -49,3 +49,40 @@ function test(){
 }
 
 test();
+
+reAssigment();
+
+function reAssigment(){
+    let name ;  //Reassigning value to the variable is possible with let keywod 
+    name = 'vijay';
+    name='ppp';
+    name='kkjkjkj'
+    console.log(name);
+
+    var surName = 'patil';
+    surName ='Bhapkar';
+    surName = 'jxzbchbc'
+    console.log(surName); //Reassigning value to the variable is possible with var kwyword
+
+    const middleName = "Om";
+    // middleName = 'Jay'; //
+    // console.log(middleName);
+}
+
+//Redeclaration of varibles
+
+reDeclaration();
+
+function reDeclaration(){
+   let city = 'pune';  //Redeclaration is not possible with variable having let keyword.
+   //let city ='mopj';
+
+   var num = 9000;
+   var num = 8000000; //Redeclaration of variable having var keyword is possible .
+   console.log(num);
+
+   const hhh = true;  //Redeclaration of variable having const keyword is not possible
+   //const hhh = false;
+}
+
+
