@@ -29,9 +29,9 @@ function test() {
         { name: 'jay', age: 30 }
     ]
 
-    let empolyeeNames = employee.map(employeeData => {
-        return employeeData.name;
-    })
+    let empolyeeNames = employee.map(emp => {
+        return emp.name;
+    })//['poonam','pooja','om','jay']
     // let empolyeeNames =[];
     //  employee.map(employeeData=>{
     //     empolyeeNames.push(employeeData.name);
@@ -92,10 +92,10 @@ num.forEach(item =>{
 console.log(num3);
 
 //JSON
-let stringifyedData = JSON.stringify(employee1)
-console.log("stringifyedData",stringifyedData)
-let parsedData = JSON.parse(stringifyedData)
-console.log('prsedData',parsedData.ename);
+// let stringifyedData = JSON.stringify(employee1)
+// console.log("stringifyedData",stringifyedData)
+// let parsedData = JSON.parse(stringifyedData)
+// console.log('prsedData',parsedData.ename);
 
 
 //shallow copy :
@@ -152,3 +152,11 @@ newEmployee1.ename = "Beck";
 newEmployee1.salary = 70000;
 console.log("Employee=> ", employee1);
 console.log("New Employee=> ", newEmployee1);
+
+
+//filter array ittration method
+let no = [10,50,100,22,20,4,40,60];
+var itemGreater = no.filter(item =>{
+return item > 20;
+})
+console.log(itemGreater,'itemGreater');
