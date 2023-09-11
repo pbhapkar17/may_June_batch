@@ -1,7 +1,30 @@
 
 
 <div class="main">
-  <h1>My first Application</h1>
-  <p>{{city3}}</p>
+  <div class="nav">
+    <h1 class="title-section" >{{title}}</h1>
+  </div>
+ 
+  <p class="city-section">{{city3}}</p>
+  
+  {{name}} 
+  <p>{{name}}</p>
+
+<p>{{no1 + no2}}</p>    <!-- can we pass arithmatic expression in string interpolation:yes -->
+<p>{{500 + 40}}</p>
+<p>{{500+20 + 'ponam' + 40 + 20}}</p>
+<!-- <p>{{typeof(no1)}}</p> In interpolation type of operator will through error -->
+
+<p>{{learningInterpolation()}}</p>
+<!-- we can function into the ingterpollation -->
+
+ <!-- <p>{{no2 = 600}}</p>assigning value to the property from interpolation is not possible-->
+
+<!-- <p>{{}}</p> Parser Error: Blank expressions are not allowed in interpolated strings -->
+
+<p>{{no2 === 20}}</p>  <!-- it will return true or false-->
+
+
+
 </div>
 
