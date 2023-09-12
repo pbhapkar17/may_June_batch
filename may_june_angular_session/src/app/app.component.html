@@ -4,7 +4,7 @@
   <div class="nav">
     <h1 class="title-section" >{{title}}</h1>
   </div>
- 
+ <p>poonam  xcsac vdfd</p>
   <p class="city-section">{{city3}}</p>
   
   {{name}} 
@@ -22,7 +22,34 @@
 
 <!-- <p>{{}}</p> Parser Error: Blank expressions are not allowed in interpolated strings -->
 
-<p>{{no2 === 20}}</p>  <!-- it will return true or false-->
+<p>{{no2 === no1}}</p>  <!-- it will return true or false-->
+
+<p>poonam</p>
+<!-- <p>{{'poonam'}}</p>  useless -->
+<p>{{name}}</p>
+<p>{{no3}}</p>
+<p>{{cars}}</p>
+
+<p>{{student.age}}</p>
+<p>{{student.name}}</p>
+<!-- <p>888</p> this is not string interpolation-->
+
+
+<!-- property binding: []  -->
+name : <input type="text" [value] = "city2" placeholder="Please enter you name"> 
+
+carName : <input type="text" [value]="car"><br>
+student age : <input type="text" [value]="student.age"><br>
+Gender : 
+male : <input type="radio" [value]="genderM" [checked]="genderMale" name="gender" (change)="gen($event)">
+Female : <input type="radio" [value]="genderF" [checked]="genderFemale"  name="gender" (change)="gen($event)">
+
+
+
+
+
+
+
 
 
 
