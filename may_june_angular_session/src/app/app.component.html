@@ -1,48 +1,53 @@
-
-
 <div class="main">
   <div class="nav">
-    <h1 class="title-section" >{{title}}</h1>
+    <h1 class="title-section">{{title}}</h1>
   </div>
- <p>poonam  xcsac vdfd</p>
+  <p>poonam xcsac vdfd</p>
   <p class="city-section">{{city3}}</p>
-  
-  {{name}} 
+
+  {{name}}
   <p>{{name}}</p>
 
-<p>{{no1 + no2}}</p>    <!-- can we pass arithmatic expression in string interpolation:yes -->
-<p>{{500 + 40}}</p>
-<p>{{500+20 + 'ponam' + 40 + 20}}</p>
-<!-- <p>{{typeof(no1)}}</p> In interpolation type of operator will through error -->
+  <p>{{no1 + no2}}</p> <!-- can we pass arithmatic expression in string interpolation:yes -->
+  <p>{{500 + 40}}</p>
+  <p>{{500+20 + 'ponam' + 40 + 20}}</p>
+  <!-- <p>{{typeof(no1)}}</p> In interpolation type of operator will through error -->
 
-<p>{{learningInterpolation()}}</p>
-<!-- we can function into the ingterpollation -->
+  <p>{{learningInterpolation()}}</p>
+  <!-- we can function into the ingterpollation -->
 
- <!-- <p>{{no2 = 600}}</p>assigning value to the property from interpolation is not possible-->
+  <!-- <p>{{no2 = 600}}</p>assigning value to the property from interpolation is not possible-->
 
-<!-- <p>{{}}</p> Parser Error: Blank expressions are not allowed in interpolated strings -->
+  <!-- <p>{{}}</p> Parser Error: Blank expressions are not allowed in interpolated strings -->
 
-<p>{{no2 === no1}}</p>  <!-- it will return true or false-->
+  <p>{{no2 === no1}}</p> <!-- it will return true or false-->
 
-<p>poonam</p>
-<!-- <p>{{'poonam'}}</p>  useless -->
-<p>{{name}}</p>
-<p>{{no3}}</p>
-<p>{{cars}}</p>
+  <p>poonam</p>
+  <!-- <p>{{'poonam'}}</p>  useless -->
+  <p>{{name}}</p>
+  <p>{{no3}}</p>
+  <p>{{cars}}</p>
 
-<p>{{student.age}}</p>
-<p>{{student.name}}</p>
-<!-- <p>888</p> this is not string interpolation-->
+  <p>{{student.age}}</p>
+  <p>{{student.name}}</p>
+  <!-- <p>888</p> this is not string interpolation-->
 
 
-<!-- property binding: []  -->
-name : <input type="text" [value] = "city2" placeholder="Please enter you name"> 
+  <!-- property binding: []  -->
+  name : <input type="text" [value]="city2" placeholder="Please enter you name">
 
-carName : <input type="text" [value]="car"><br>
-student age : <input type="text" [value]="student.age"><br>
-Gender : 
-male : <input type="radio" [value]="genderM" [checked]="genderMale" name="gender" (change)="gen($event)">
-Female : <input type="radio" [value]="genderF" [checked]="genderFemale"  name="gender" (change)="gen($event)">
+  carName : <input type="text" [value]="car"><br>
+  student age : <input type="text" [value]="student.age"><br>
+  Gender : <br>
+  Male : <input type="radio" [value]="genderM" name="gender" (change)="gen($event)">
+  Female : <input type="radio" [value]="genderF" name="gender" (change)="gen($event)">
+<br><br>
+Hobbies:
+Painting: <input type="checkbox" [value]="paintingHobby" (change)="hobbies($event)">
+Skeching: <input type="checkbox" [value]="skechingHobby" (change)="hobbies($event)">
+Reading :<input type="checkbox" [value]="readingHobby" (change)="hobbies($event)">
+
+
 
 
 
@@ -54,4 +59,3 @@ Female : <input type="radio" [value]="genderF" [checked]="genderFemale"  name="g
 
 
 </div>
-
