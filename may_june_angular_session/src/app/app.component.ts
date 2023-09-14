@@ -30,9 +30,9 @@ export class AppComponent { //class to write code here
   readingHobby = "Reading";
   userHobbies : string[]=[];
   favCountry = "India";
-
   favFruit = 'Apple';
-
+  studentName:any = 'ssssss';
+  empName=''
   constructor() { }    //to inject dependancies
 
   //life cycle hooks 
@@ -72,4 +72,10 @@ export class AppComponent { //class to write code here
   console.log(this.favFruit);
   this.learningInterpolation();
  }
+
+ submit(event:any){
+console.log(event);
+
+ }
+
 }

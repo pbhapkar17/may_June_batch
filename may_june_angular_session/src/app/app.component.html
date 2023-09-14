@@ -48,14 +48,24 @@ Skeching: <input type="checkbox" [value]="skechingHobby" (change)="hobbies($even
 Reading :<input type="checkbox" [value]="readingHobby" (change)="hobbies($event)">
 
 
+<!-- event binding : event binding is used to handle the events raised from the DOM like button click, mouse move etc. When the DOM event happens (eg. click, change, keyup),
+   it calls the specified method in the component.  -->
+<button (click)="submit($event)">Submit</button>
 
+<!-- Two way data binding: two-way binding has a feature to update data from component to view and vice-versa.
+i.e. Whenever user make changes in the Model, it will be reflected in the View and when user make changes in View, it will be reflected in Model.
+two way data binding, property binding and event binding are combined togethe
 
+Note: For two way data binding, we have to enable the ngModel directive. It depends upon FormsModule in angular/forms package,
+ so we have to add FormsModule in imports[] array in the AppModule.-->
+<br>
+ Student Name : <input type="text" [(ngModel)]="studentName"> 
+<p>{{studentName}}</p>
+emp Name : <input type="text" [(ngModel)]="empName">
+{{empName}}
 
-
-
-
-
-
+<br><br><br>
+<br > <br>
 
 
 </div>
