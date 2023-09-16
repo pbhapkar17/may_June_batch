@@ -4,7 +4,7 @@
   </div>
   <p>poonam xcsac vdfd</p>
   <p class="city-section">{{city3}}</p>
-
+<!-- <p class="main2">cndncsdnc cnjcnjdnj</p> -->
   {{name}}
   <p>{{name}}</p>
 
@@ -63,6 +63,19 @@ Note: For two way data binding, we have to enable the ngModel directive. It depe
 <p>{{studentName}}</p>
 emp Name : <input type="text" [(ngModel)]="empName">
 {{empName}}
+
+
+<br>
+
+  <input type="text" [(ngModel)]="num1"> num1 <br>
+  <input type="text" [(ngModel)]="num2"> num2 <br>
+
+  <input type="text" (keyup)="addition1($event)"> num1 <br>
+  <input type="text" (keyup)="addition2($event)"> num2 <br>
+  
+  <button (click)="addition()">Addition</button>
+
+<p>{{result}}</p>
 
 <br><br><br>
 <br > <br>
