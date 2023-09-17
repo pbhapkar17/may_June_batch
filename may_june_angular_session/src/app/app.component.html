@@ -1,40 +1,42 @@
-<div class="main">
+<!-- <div class="main">
   <div class="nav">
     <h1 class="title-section">{{title}}</h1>
   </div>
   <p>poonam xcsac vdfd</p>
-  <p class="city-section">{{city3}}</p>
+  <p class="city-section">{{city3}}</p> -->
 <!-- <p class="main2">cndncsdnc cnjcnjdnj</p> -->
-  {{name}}
+  <!-- {{name}}
   <p>{{name}}</p>
 
-  <p>{{no1 + no2}}</p> <!-- can we pass arithmatic expression in string interpolation:yes -->
-  <p>{{500 + 40}}</p>
-  <p>{{500+20 + 'ponam' + 40 + 20}}</p>
+  <p>{{no1 + no2}}</p>  -->
+  <!-- can we pass arithmatic expression in string interpolation:yes -->
+  <!-- <p>{{500 + 40}}</p>
+  <p>{{500+20 + 'ponam' + 40 + 20}}</p> -->
   <!-- <p>{{typeof(no1)}}</p> In interpolation type of operator will through error -->
-
-  <p>{{learningInterpolation()}}</p>
+<!-- 
+  <p>{{learningInterpolation()}}</p> -->
   <!-- we can function into the ingterpollation -->
 
   <!-- <p>{{no2 = 600}}</p>assigning value to the property from interpolation is not possible-->
 
   <!-- <p>{{}}</p> Parser Error: Blank expressions are not allowed in interpolated strings -->
 
-  <p>{{no2 === no1}}</p> <!-- it will return true or false-->
+  <!-- <p>{{no2 === no1}}</p>  -->
+  <!-- it will return true or false-->
 
-  <p>poonam</p>
+  
   <!-- <p>{{'poonam'}}</p>  useless -->
-  <p>{{name}}</p>
+  <!-- <p>{{name}}</p>
   <p>{{no3}}</p>
   <p>{{cars}}</p>
 
   <p>{{student.age}}</p>
-  <p>{{student.name}}</p>
+  <p>{{student.name}}</p> -->
   <!-- <p>888</p> this is not string interpolation-->
 
 
   <!-- property binding: []  -->
-  name : <input type="text" [value]="city2" placeholder="Please enter you name">
+  <!-- name : <input type="text" [value]="city2" placeholder="Please enter you name">
 
   carName : <input type="text" [value]="car"><br>
   student age : <input type="text" [value]="student.age"><br>
@@ -46,19 +48,19 @@ Hobbies:
 Painting: <input type="checkbox" [value]="paintingHobby" (change)="hobbies($event)">
 Skeching: <input type="checkbox" [value]="skechingHobby" (change)="hobbies($event)">
 Reading :<input type="checkbox" [value]="readingHobby" (change)="hobbies($event)">
-
+ -->
 
 <!-- event binding : event binding is used to handle the events raised from the DOM like button click, mouse move etc. When the DOM event happens (eg. click, change, keyup),
    it calls the specified method in the component.  -->
-<button (click)="submit($event)">Submit</button>
+<!-- <button (click)="submit($event)">Submit</button> -->
 
-<!-- Two way data binding: two-way binding has a feature to update data from component to view and vice-versa.
+<!-- Two way data binding: two-way binding we can bind data from component to view and vice-versa.
 i.e. Whenever user make changes in the Model, it will be reflected in the View and when user make changes in View, it will be reflected in Model.
 two way data binding, property binding and event binding are combined togethe
 
 Note: For two way data binding, we have to enable the ngModel directive. It depends upon FormsModule in angular/forms package,
  so we have to add FormsModule in imports[] array in the AppModule.-->
-<br>
+<!-- <br>
  Student Name : <input type="text" [(ngModel)]="studentName"> 
 <p>{{studentName}}</p>
 emp Name : <input type="text" [(ngModel)]="empName">
@@ -81,4 +83,20 @@ emp Name : <input type="text" [(ngModel)]="empName">
 <br > <br>
 
 
+</div> -->
+<div class="main">
+
+<h1 > My first Page </h1>
+
+<h1> {{heading}} </h1>
+
+<input type="text" [(ngModel)]="myCityName">
+
+{{myCityName}}
+
+<br>
+<input type="number" [(ngModel)]="addNumber1">
+<input type="number" [(ngModel)]="addNumber2">
+<button (click)="additionOfNumbers()"> click me to add</button>
+<p>{{addResult}}</p>
 </div>

@@ -37,6 +37,11 @@ export class AppComponent { //class to write code here
   num2 : number = 20;
   result?:number;
 
+  heading : string = 'My first Page..';
+  myCityName? :string;
+  addNumber1 :any;
+  addNumber2 :any;
+  addResult: any;
   constructor() { }    //to inject dependancies
 
   //life cycle hooks 
@@ -100,4 +105,24 @@ addition1(jjknjnj:any){
 addition2(event:any){
   this.num2 = parseInt(event.target.value)  ;
 }
+
+
+heading1(){
+  let pageHeading = 'my First Page';
+
+
+}
+
+
+additionOfNumbers(){
+ this.addResult =  this.addNumber1 + this.addNumber2;
+}
+
+
+
+
+
+
+
+
 }
