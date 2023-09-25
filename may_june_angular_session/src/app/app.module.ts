@@ -4,10 +4,11 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
+import { AddCircleComponent } from './add-circle/add-circle.component';
 
 @NgModule({
   declarations: [  //components,directives,pipes
-    AppComponent
+    AppComponent, AddCircleComponent
   ],
   imports: [      //modules
     BrowserModule,

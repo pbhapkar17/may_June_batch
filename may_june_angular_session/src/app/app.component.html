@@ -84,7 +84,7 @@ emp Name : <input type="text" [(ngModel)]="empName">
 
 
 </div> -->
-<div class="main">
+<!-- <div class="main">
 
 <h1 > My first Page </h1>
 
@@ -99,4 +99,23 @@ emp Name : <input type="text" [(ngModel)]="empName">
 <input type="number" [(ngModel)]="addNumber2">
 <button (click)="additionOfNumbers()"> click me to add</button>
 <p>{{addResult}}</p>
+</div> -->
+
+<!-- <button (click)="addCircle()">Add Circle</button>
+<div *ngFor="let circle of circles"
+     [class.selected]="circle.isSelected"
+     [style.background-color]="circle.backgroundColor"
+     (click)="toggleSelectCircle(circle)">
+  {{ circle.id }}
 </div>
+
+
+
+{{test}}
+
+<input type="text" [value]="test">
+<input type="text" [(ngModel)]="test1">
+{{test1}} -->
+
+
+<router-outlet></router-outlet>

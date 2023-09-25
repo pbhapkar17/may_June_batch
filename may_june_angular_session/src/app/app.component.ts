@@ -1,4 +1,5 @@
 import { Component } from '@angular/core'; //impot section
+import { Router } from '@angular/router';
 
 @Component({  //component directive/decorator
   selector: 'app-root',
@@ -42,7 +43,14 @@ export class AppComponent { //class to write code here
   addNumber1 :any;
   addNumber2 :any;
   addResult: any;
-  constructor() { }    //to inject dependancies
+  circles: { id: number, isSelected: boolean, backgroundColor: string }[] = [];
+  nextCircleId = 1;
+  selectedCircle?: { id: number, isSelected: boolean, backgroundColor: string } ;
+
+
+  test = "Kolhapur";
+  test1 = "nashik";
+  constructor(private router:Router) { }    //to inject dependancies
 
   //life cycle hooks 
 
@@ -119,10 +127,38 @@ additionOfNumbers(){
 }
 
 
+toggleSelectCircle(circle: { id: number, isSelected: boolean, backgroundColor: string }) {
+ console.log(circle);
+ console.log(this.selectedCircle);
+ 
+  if (circle === this.selectedCircle) {
+    circle.isSelected = !circle.isSelected;
+    circle.backgroundColor == 'blue'? circle.backgroundColor ='grey' :circle.backgroundColor ='blue'
+  } else {
+    if(this.selectedCircle) {
+      this.selectedCircle.isSelected = false;
+      this.selectedCircle.backgroundColor = 'blue'
+    }
+    circle.isSelected = true;
+    circle.backgroundColor = 'grey'
+    this.selectedCircle = circle;
+  }
+}
+addCircle() {
+  const newCircle = {
+    id: this.nextCircleId,
+    isSelected: false,
+    //backgroundColor: this.nextCircleId % 2 === 0 ? 'blue' : 'red'
+    backgroundColor:'blue'
+  };
+  this.circles.push(newCircle);
+  this.nextCircleId++;
+}
 
 
-
-
+landing(){
+  this.router.navigateByUrl('landing')
+}
 
 
 }
