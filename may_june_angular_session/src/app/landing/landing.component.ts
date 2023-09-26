@@ -8,14 +8,17 @@ import { Router } from '@angular/router';
 })
 export class LandingComponent {
 
-constructor(private router : Router){
+  constructor(private router: Router) {
 
-}
-
-  home(){
-     this.router.navigateByUrl('home');
   }
-  addCircle(){
+
+  home() {
+    this.router.navigateByUrl('Home');
+  }
+  addCircle() {
     this.router.navigateByUrl('addCircle');
+  }
+  test(){
+    this.router.navigateByUrl('test');
   }
 }

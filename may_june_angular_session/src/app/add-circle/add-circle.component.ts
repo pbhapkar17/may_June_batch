@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-add-circle',
@@ -10,6 +11,8 @@ export class AddCircleComponent {
   nextCircleId = 1;
   selectedCircle?: { id: number, isSelected: boolean, backgroundColor: string } ;
 
+
+  constructor(private router : Router){}
 
 
   toggleSelectCircle(circle: { id: number, isSelected: boolean, backgroundColor: string }) {
@@ -39,4 +42,8 @@ export class AddCircleComponent {
      this.circles.push(newCircle);
      this.nextCircleId++;
    }
+   back(){
+    this.router.navigateByUrl('landing')
+  }
+
 }

@@ -6,9 +6,16 @@ import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
 import { AddCircleComponent } from './add-circle/add-circle.component';
 
+import { LandingComponent } from './landing/landing.component';
+import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
+
 @NgModule({
   declarations: [  //components,directives,pipes
-    AppComponent, AddCircleComponent
+    AppComponent,
+    LandingComponent,
+    AddCircleComponent,
+    PagenotfoundComponent,
+ 
   ],
   imports: [      //modules
     BrowserModule,
