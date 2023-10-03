@@ -8,6 +8,7 @@ import { AddCircleComponent } from './add-circle/add-circle.component';
 
 import { LandingComponent } from './landing/landing.component';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
+import { StudentComponent } from './student/student.component';
 
 @NgModule({
   declarations: [  //components,directives,pipes
@@ -15,6 +16,7 @@ import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
     LandingComponent,
     AddCircleComponent,
     PagenotfoundComponent,
+    StudentComponent,
  
   ],
   imports: [      //modules

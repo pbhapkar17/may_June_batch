@@ -21,4 +21,7 @@ export class LandingComponent {
   test(){
     this.router.navigateByUrl('test');
   }
+  student(){ 
+    this.router.navigateByUrl('student')
+  }
 }

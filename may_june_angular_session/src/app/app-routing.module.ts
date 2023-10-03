@@ -4,6 +4,7 @@ import { LandingComponent } from './landing/landing.component';
 import { HomeComponent } from './home/home.component';
 import { AddCircleComponent } from './add-circle/add-circle.component';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
+import { StudentComponent } from './student/student.component';
 
 
 
@@ -12,6 +13,7 @@ const routes: Routes = [
   { path: 'Home', component : HomeComponent },
   { path : 'addCircle', component : AddCircleComponent },
   { path : 'landing' , component: LandingComponent},
+  { path : 'student' , component: StudentComponent},
   { path: '**' , component : PagenotfoundComponent} // Wildcard route
   
 ];
