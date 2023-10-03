@@ -14,8 +14,14 @@ const routes: Routes = [
   { path : 'addCircle', component : AddCircleComponent },
   { path : 'landing' , component: LandingComponent},
   { path : 'student' , component: StudentComponent},
-  { path: '**' , component : PagenotfoundComponent} // Wildcard route
   
+  // {
+  //   path: 'studentModule',
+  //   loadChildren: () => import('./items/items.module').then(m => m.ItemsModule)
+  // },
+  { path : 'studentModule', loadChildren:()=>import('./student/student.module').then(m => m.StudentModule)},
+  { path: 'admin', loadChildren:()=>import('./admin/admin.module').then(mod=>mod.AdminModule)},
+  { path: '**' , component : PagenotfoundComponent} // Wildcard route
 ];
 
 @NgModule({

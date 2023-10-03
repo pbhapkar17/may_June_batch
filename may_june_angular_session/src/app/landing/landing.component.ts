@@ -24,4 +24,10 @@ export class LandingComponent {
   student(){ 
     this.router.navigateByUrl('student')
   }
+  studentModule(){
+    this.router.navigateByUrl('studentModule/studentHome')
+  }
+  adminMod(){
+    this.router.navigateByUrl('admin/adminLanding')
+  }
 }

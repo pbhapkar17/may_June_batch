@@ -9,6 +9,7 @@ import { AddCircleComponent } from './add-circle/add-circle.component';
 import { LandingComponent } from './landing/landing.component';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 import { StudentComponent } from './student/student.component';
+console.log('app module.........');
 
 @NgModule({
   declarations: [  //components,directives,pipes
