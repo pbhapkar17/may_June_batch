@@ -30,4 +30,7 @@ export class LandingComponent {
   adminMod(){
     this.router.navigateByUrl('admin/adminLanding')
   }
+  landing2(){
+    this.router.navigateByUrl('landing2')
+  }
 }

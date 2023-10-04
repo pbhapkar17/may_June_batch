@@ -5,6 +5,7 @@ import { HomeComponent } from './home/home.component';
 import { AddCircleComponent } from './add-circle/add-circle.component';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 import { StudentComponent } from './student/student.component';
+import { Landing2Component } from './admin/landing2/landing2.component';
 
 
 
@@ -14,7 +15,7 @@ const routes: Routes = [
   { path : 'addCircle', component : AddCircleComponent },
   { path : 'landing' , component: LandingComponent},
   { path : 'student' , component: StudentComponent},
-  
+  { path : 'landing2' , component: Landing2Component},
   // {
   //   path: 'studentModule',
   //   loadChildren: () => import('./items/items.module').then(m => m.ItemsModule)
