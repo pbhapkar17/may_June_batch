@@ -1,1 +1,14 @@
-<p>sign Up Form</p>
+<div>
+    <h1> Sign Up Form</h1>
+    <form [formGroup]="principalSignUpForm">
+        <label> User Name</label><br>
+        <input type="text" formControlName="userName"><br>
+        <span class="err" *ngIf="principalSignUpForm.get('userName')?.errors?.['maxlength']">Maximum 10 character's allowed</span><br>
+
+        <label> Email Id</label><br>
+        <input type="text" formControlName="emailId"><br>
+
+
+        <button (click)="submit()" [disabled]="!principalSignUpForm.valid"> Submit</button>
+    </form>
+</div>
