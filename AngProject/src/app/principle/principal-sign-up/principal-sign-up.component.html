@@ -5,30 +5,47 @@
         <input type="text" formControlName="userName"><br>
         <span class="err" *ngIf="principalSignUpForm.get('userName')?.errors?.['maxlength']">
             Maximum 10 character's allowed</span>
-        <span class="err" *ngIf="principalSignUpForm.get('userName')?.errors?.['minlength']" >
+        <span class="err" *ngIf="principalSignUpForm.get('userName')?.errors?.['minlength']">
             Minimum 5 characters are required </span>
         <span class="err" *ngIf=" !principalSignUpForm.get('userName')?.errors?.['maxlength'] 
          && !principalSignUpForm.get('userName')?.errors?.['minlength']
          && principalSignUpForm.get('userName')?.errors?.['pattern']">
-             Enter only Alphabets
+            Enter only Alphabets
         </span>
         <br>
         <label>Mob No</label><br>
         <input type="text" class="mob-inp" value="+91">
         <input type="text" formControlName="mobNo" maxlength="13"><br>
-        <span class="err" *ngIf="principalSignUpForm.get('mobNo')?.errors?.['pattern']">Enter Numbers Only</span> 
-         
+        <span class="err" *ngIf="principalSignUpForm.get('mobNo')?.errors?.['pattern']">Enter Numbers Only</span>
+
         <br>
         <label> Email Id</label><br>
         <input type="text" formControlName="emailId">
-        <span class="err" *ngIf="principalSignUpForm.get('emailId')?.errors?.['pattern']">Enter valid mail Id</span> 
+        <span class="err" *ngIf="principalSignUpForm.get('emailId')?.errors?.['pattern']">Enter valid mail Id</span>
         <br>
-      
-        <label for="">Birth Date</label>
+
+        <label for="">Birth Date</label><br>
         <input type="text" placeholder="dd/mm/yyyy" formControlName="dob" (blur)="calYear()">
+        <span>Your age : {{userAge}}</span><br>
+        <span class="err" *ngIf="principalSignUpForm.get('dob')?.errors?.['pattern']"> Please enter Date in proper
+            formate</span>
         <!-- <span  *ngIf="age > 18 && age < 60">age should above 18 and below 60</span> -->
         <br>
-        {{calAge}}
+        <!-- <input type="date" (blur)="calYear()"> -->
+
+        <input type="checkbox" formControlName="TC"> Please accept terms and conditions <br>
+        <span class="err" *ngIf="principalSignUpForm.get('TC')?.invalid &&
+         (principalSignUpForm.get('TC')?.touched || principalSignUpForm.get('TC')?.dirty)">
+            Please accept terms and conditions
+        </span><br>
+
+        <label>Gender</label>
+        <input type="radio" formControlName="gender" value="Male"  (change)="gender()"> Male
+        <input type="radio" formControlName="gender" value="Female" (change)="gender()"> Female <br>
+        <div class="err" *ngIf="!isGenderSelected ">Please select gender</div>
+        <br><br>
         <button (click)="submit()" [disabled]="!principalSignUpForm.valid"> Submit</button>
     </form>
 </div>
+
+<br><br><br><br><br><br><br><br>

@@ -10,8 +10,10 @@ export class PrincipalSignUpComponent {
 
   principalSignUpForm! : FormGroup;
   age = 20;
-  todayDate= new Date();
-  calAge: any;
+  todayDate = new Date();
+  userAge: any;
+  datePattern = /^(0[1-9]|[1-2][0-9]|3[0-1])\/(0[1-9]|1[0-2])\/\d{4}$/;
+  isGenderSelected:boolean=true
   constructor( public fb : FormBuilder){}
 
   ngOnInit(){
@@ -26,21 +28,34 @@ export class PrincipalSignUpComponent {
       userName : ['Poonam',[Validators.maxLength(10),Validators.minLength(5),Validators.pattern('[a-zA-Z ]+')]],
       emailId:[,[Validators.pattern(/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/)]],
       mobNo:['',[Validators.pattern('[0-9+]*')]],
-      dob:[]
+     // dob:['',[Validators.pattern(/^(0[1-9]|[1-2][0-9]|3[0-1])\/(0[1-9]|1[0-2])\/\d{4}$/)]]
+     dob:['',[Validators.pattern(this.datePattern)]],
+     TC:[false,Validators.requiredTrue],
+     gender:['']
     })
   }
   
   submit(){
-    console.log('f data',this.principalSignUpForm.value);
+    let gender = this.principalSignUpForm.value.gender
+    if(gender){
+      console.log('f data',this.principalSignUpForm.value);
+    }
+    else{
+      this.isGenderSelected=false
+      return
+    }
+    
     
   }
 
   calYear(){
-      let dob = this.principalSignUpForm.value.dob;
-      let fYear = this.todayDate.getFullYear()
-      console.log(fYear);
-      let dobYear = dob.split('/');
-      let onlyYear = dobYear[2];
-      this.calAge = fYear - onlyYear;
+      let dobFieldValue = this.principalSignUpForm.value.dob;
+      let todayFullYear = this.todayDate.getFullYear();
+      let splitedDate = dobFieldValue?.split('/');
+      let usersFullYear = splitedDate[2];
+      this.userAge = todayFullYear - usersFullYear;
+  }
+  gender(){
+    this.isGenderSelected = true;
   }
 }
