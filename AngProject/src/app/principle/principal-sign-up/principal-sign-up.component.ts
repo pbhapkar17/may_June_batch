@@ -13,7 +13,7 @@ export class PrincipalSignUpComponent {
   todayDate = new Date();
   userAge: any;
   datePattern = /^(0[1-9]|[1-2][0-9]|3[0-1])\/(0[1-9]|1[0-2])\/\d{4}$/;
-  isGenderSelected:boolean=true
+  isGenderSelected: boolean = false;
   constructor( public fb : FormBuilder){}
 
   ngOnInit(){
@@ -41,7 +41,7 @@ export class PrincipalSignUpComponent {
       console.log('f data',this.principalSignUpForm.value);
     }
     else{
-      this.isGenderSelected=false
+      this.isGenderSelected = true;
       return
     }
     
@@ -56,6 +56,6 @@ export class PrincipalSignUpComponent {
       this.userAge = todayFullYear - usersFullYear;
   }
   gender(){
-    this.isGenderSelected = true;
+    this.isGenderSelected = false;
   }
 }

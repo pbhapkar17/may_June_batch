@@ -1,6 +1,6 @@
-<div>
+<div class="container">
     <h1> Sign Up Form</h1>
-    <form [formGroup]="principalSignUpForm">
+    <form [formGroup]="principalSignUpForm" >
         <label> User Name </label><br>
         <input type="text" formControlName="userName"><br>
         <span class="err" *ngIf="principalSignUpForm.get('userName')?.errors?.['maxlength']">
@@ -42,7 +42,16 @@
         <label>Gender</label>
         <input type="radio" formControlName="gender" value="Male"  (change)="gender()"> Male
         <input type="radio" formControlName="gender" value="Female" (change)="gender()"> Female <br>
-        <div class="err" *ngIf="!isGenderSelected ">Please select gender</div>
+        <div class="err" *ngIf="isGenderSelected ">Please select gender</div>
+        <div>
+            <label for=""> password</label>
+        </div>
+        <div>
+            <input type="password">
+            <span class="p-viewer">
+                <i class="bi bi-eye"></i>
+            </span>
+        </div>
         <br><br>
         <button (click)="submit()" [disabled]="!principalSignUpForm.valid"> Submit</button>
     </form>
