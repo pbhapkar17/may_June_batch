@@ -47,9 +47,12 @@
             <label for=""> password</label>
         </div>
         <div>
-            <input type="password">
-            <span class="p-viewer">
+            <input [type]="showPass ? 'text' : 'password'">
+            <span class="p-viewer" *ngIf="showPass" (click)="showPassword()">
                 <i class="bi bi-eye"></i>
+            </span>
+            <span class="p-viewer-slash" *ngIf="!showPass"> 
+                <i class="bi bi-eye-slash" (click)="showPassword()"></i>
             </span>
         </div>
         <br><br>
@@ -58,3 +61,6 @@
 </div>
 
 <br><br><br><br><br><br><br><br>
+
+
+

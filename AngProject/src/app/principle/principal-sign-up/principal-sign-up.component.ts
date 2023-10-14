@@ -14,6 +14,7 @@ export class PrincipalSignUpComponent {
   userAge: any;
   datePattern = /^(0[1-9]|[1-2][0-9]|3[0-1])\/(0[1-9]|1[0-2])\/\d{4}$/;
   isGenderSelected: boolean = false;
+  showPass = false;
   constructor( public fb : FormBuilder){}
 
   ngOnInit(){
@@ -57,5 +58,9 @@ export class PrincipalSignUpComponent {
   }
   gender(){
     this.isGenderSelected = false;
+  }
+  showPassword(){
+     console.log('..,.m,m');
+     this.showPass = !this.showPass;
   }
 }
