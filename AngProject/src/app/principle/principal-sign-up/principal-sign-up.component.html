@@ -51,9 +51,25 @@
             <span class="p-viewer" *ngIf="showPass" (click)="showPassword()">
                 <i class="bi bi-eye"></i>
             </span>
-            <span class="p-viewer-slash" *ngIf="!showPass"> 
+            <span class="p-viewer" *ngIf="!showPass"> 
                 <i class="bi bi-eye-slash" (click)="showPassword()"></i>
             </span>
+        </div>
+        <br>
+        <label for="">Cars</label>
+        <div>
+            <select formControlName="cars" >
+                <option value="Swift">Swift</option>
+                <option value="Jaguar">Jaguar</option>
+                <option value="Volvo">Volvo</option>
+            </select>
+        </div>
+        <br>
+        <label for="">custom validation</label>
+      
+        <div>
+            <input type="text" formControlName="customVal"><br>
+            <span class="err" *ngIf="principalSignUpForm.get('customVal')?.touched && principalSignUpForm.get('customVal')?.hasError('whiteSpace')">do not enter white space</span>
         </div>
         <br><br>
         <button (click)="submit()" [disabled]="!principalSignUpForm.valid"> Submit</button>
