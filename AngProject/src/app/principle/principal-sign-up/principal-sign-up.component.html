@@ -77,8 +77,18 @@
             <span class="err" *ngIf="principalSignUpForm.get('customVal')?.dirty 
             && principalSignUpForm.get('customVal')?.errors?.['whiteSpace']">Do not enter white space</span>
         </div>
+        <div>
+            <label for="">old </label>
+        </div>
+        <div>
+            <input type="text" formControlName="oldField"><br>
+            <span class="err"
+             *ngIf="principalSignUpForm.get('oldField')?.errors?.['oldWord']">
+             Dont write Old word to this input box
+            </span>  
+        </div>
         <br><br>
-        
+
         <button (click)="submit()" [disabled]="!principalSignUpForm.valid"> Submit</button>
     </form>
 </div>

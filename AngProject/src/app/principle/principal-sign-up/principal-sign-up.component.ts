@@ -34,7 +34,8 @@ export class PrincipalSignUpComponent {
      TC:[false,Validators.requiredTrue],
      gender:[''],
      cars:[],
-     customVal:['',this.removeWhiteSpace]
+     customVal:['',this.removeWhiteSpace],
+     oldField:['',this.oldWordRestriction]
     })
   }
   
@@ -43,8 +44,13 @@ export class PrincipalSignUpComponent {
     let isInValid = customValFieldValue.value ? customValFieldValue.value?.trim().length == 0 : null
     return isInValid ? {'whiteSpace':true}  : null;
   }
-  // customValFieldValue.value?.trim().length == 0 >>
-  // "f"  ==1
+
+  oldWordRestriction(inputValue: any) {
+    //Old,OLD,oLd,OLd,olD....
+    let inputValue1 = inputValue.value?.toLowerCase().split(' ');
+    let isIncludeOld = inputValue1.includes('old');
+    return isIncludeOld ? { 'oldWord': true } : null;
+  }
   submit(){
     let gender = this.principalSignUpForm.value.gender
     if(gender){
