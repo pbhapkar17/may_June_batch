@@ -40,10 +40,11 @@ export class PrincipalSignUpComponent {
   
   removeWhiteSpace(customValFieldValue : any){
      console.log(customValFieldValue);
-    let isInValid = customValFieldValue?.value?.trim().length == 0
-    return isInValid ? {'whiteSpace':true} : null;
+    let isInValid = customValFieldValue.value ? customValFieldValue.value?.trim().length == 0 : null
+    return isInValid ? {'whiteSpace':true}  : null;
   }
-
+  // customValFieldValue.value?.trim().length == 0 >>
+  // "f"  ==1
   submit(){
     let gender = this.principalSignUpForm.value.gender
     if(gender){

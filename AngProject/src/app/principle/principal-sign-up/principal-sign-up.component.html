@@ -67,11 +67,18 @@
         <br>
         <label for="">custom validation</label>
       
+        <!-- <div>
+            <input type="text" formControlName="customVal"><br>
+            <span class="err" *ngIf="principalSignUpForm.get('customVal')?.dirty 
+            && principalSignUpForm.get('customVal')?.hasError('whiteSpace')">Do not enter white space</span>
+        </div> -->
         <div>
             <input type="text" formControlName="customVal"><br>
-            <span class="err" *ngIf="principalSignUpForm.get('customVal')?.touched && principalSignUpForm.get('customVal')?.hasError('whiteSpace')">do not enter white space</span>
+            <span class="err" *ngIf="principalSignUpForm.get('customVal')?.dirty 
+            && principalSignUpForm.get('customVal')?.errors?.['whiteSpace']">Do not enter white space</span>
         </div>
         <br><br>
+        
         <button (click)="submit()" [disabled]="!principalSignUpForm.valid"> Submit</button>
     </form>
 </div>
