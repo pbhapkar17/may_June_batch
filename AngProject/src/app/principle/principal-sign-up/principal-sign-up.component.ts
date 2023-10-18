@@ -40,7 +40,6 @@ export class PrincipalSignUpComponent {
   }
   
   removeWhiteSpace(customValFieldValue : any){
-     console.log(customValFieldValue);
     let isInValid = customValFieldValue.value ? customValFieldValue.value?.trim().length == 0 : null
     return isInValid ? {'whiteSpace':true}  : null;
   }
