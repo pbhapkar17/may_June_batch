@@ -11,6 +11,6 @@ export class PrincipleHomeComponent {
 
    signUp(){
     // debugger
-    this.route.navigateByUrl('PrincipleMod/signUp')
+    this.route.navigateByUrl('PrincipleMod/signUp');
    }
 }

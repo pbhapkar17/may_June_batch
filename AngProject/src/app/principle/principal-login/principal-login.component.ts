@@ -6,5 +6,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./principal-login.component.scss']
 })
 export class PrincipalLoginComponent {
+  userName:any
 
+
+  submit(form:any){
+console.log(form);
+
+  }
 }

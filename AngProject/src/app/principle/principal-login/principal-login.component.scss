@@ -1,0 +1,32 @@
+.temp-form-container{
+    background-color: cadetblue;
+    border: 2px solid greenyellow;
+    width: 400px;
+    min-height: 300px;
+    margin: auto;
+    text-align: center;
+    position: relative;
+    top: 10px;
+    padding: 5px 5px;
+    
+}
+
+input:focus{
+    background-color: aquamarine;
+
+}
+
+input{
+    width: 250px;
+}
+.sbt-btn{
+    border: none;
+    border-radius: 20px;
+    background-color: orchid;
+    color: white;
+    padding: 4px 31px;
+}
+.error{
+    color: red;
+    font-size: 17px;
+}

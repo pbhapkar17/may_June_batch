@@ -1,1 +1,25 @@
-<p>principal-login works!</p>
+<div class="temp-form-container">
+    <br>
+    <h2> Login Form</h2><br>
+    <form #loginForm = "ngForm" autocomplete="off">
+        <div>
+            <label> UserName</label>
+        </div>
+        <div>
+            <input type="text"  #userName="ngModel" ngModel name="userName" required>
+        </div>
+        <span class="error" *ngIf="userName.touched && userName.errors?.['required']">UserName is required</span>
+         <br>
+        <div>
+            <label> Password</label>
+        </div>
+        <div>
+            <input ngModel #password="ngModel" type="text"  name="password" required>
+        </div>
+        <span class="error" *ngIf="password.touched && password.errors?.['required']">password is required</span>
+        <br><br><br>
+        <div>
+            <button class="sbt-btn" (click)="submit(loginForm.value)">Submit</button>
+        </div>
+    </form>
+</div>
