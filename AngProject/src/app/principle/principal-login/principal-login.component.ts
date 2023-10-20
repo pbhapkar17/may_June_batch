@@ -9,8 +9,8 @@ export class PrincipalLoginComponent {
   userName:any
 
 
-  submit(form:any){
-console.log(form);
+  submit(form: any) {
+    console.log(form);
 
   }
 }

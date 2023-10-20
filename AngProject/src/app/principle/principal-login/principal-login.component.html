@@ -1,22 +1,33 @@
 <div class="temp-form-container">
     <br>
     <h2> Login Form</h2><br>
-    <form #loginForm = "ngForm" autocomplete="off">
+    <form #loginForm="ngForm" autocomplete="off">
         <div>
             <label> UserName</label>
         </div>
         <div>
-            <input type="text"  #userName="ngModel" ngModel name="userName" required>
+            <input type="text" #userName="ngModel" ngModel name="userName" required pattern="[a-zA-Z ]*$">
         </div>
-        <span class="error" *ngIf="userName.touched && userName.errors?.['required']">UserName is required</span>
-         <br>
+        <span class="error" *ngIf="userName.touched && userName.errors?.['required']">
+            UserName is required
+        </span>
+        <span class="error" *ngIf="userName.touched && userName.dirty
+         && userName.errors?.['pattern']">
+            Please Enter Alphabets Only
+        </span>
+        <br>
         <div>
             <label> Password</label>
         </div>
         <div>
-            <input ngModel #password="ngModel" type="text"  name="password" required>
+            <input ngModel #password="ngModel" type="text" name="password" required
+                pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d|\W).{8,}$">
         </div>
-        <span class="error" *ngIf="password.touched && password.errors?.['required']">password is required</span>
+        <span class="error" *ngIf="password.touched && password.errors?.['required']">
+            password is required</span><br>
+        <span class="error" *ngIf="password.touched && password.errors?.['pattern']">
+          Please match password formate</span>
+
         <br><br><br>
         <div>
             <button class="sbt-btn" (click)="submit(loginForm.value)">Submit</button>
