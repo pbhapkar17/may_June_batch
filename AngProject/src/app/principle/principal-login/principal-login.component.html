@@ -1,7 +1,7 @@
 <div class="temp-form-container">
     <br>
-    <h2> Login Form</h2><br>
-    <form #loginForm="ngForm" autocomplete="off">
+    <h2 *ngIf="showLoginForm"> Login Form</h2><br>
+    <form #loginForm="ngForm" autocomplete="off" *ngIf="showLoginForm">
         <div>
             <label> UserName</label>
         </div>
@@ -26,11 +26,41 @@
         <span class="error" *ngIf="password.touched && password.errors?.['required']">
             password is required</span><br>
         <span class="error" *ngIf="password.touched && password.errors?.['pattern']">
-          Please match password formate</span>
+            Please match Password formate</span><br>
 
-        <br><br><br>
         <div>
             <button class="sbt-btn" (click)="submit(loginForm.value)">Submit</button>
+        </div><br>
+        <button class="for-pass" class="sbt-btn" (click)="forgetPassword()" > Forget password </button>
+    </form><br>
+
+    <form *ngIf="!showLoginForm" #forgetPasswordForm="ngForm">
+
+        New Password <br>
+
+        <input type="text" #newPassword="ngModel" ngModel name="newPassWord" required 
+        (keyup)="newPasswordFiledValue(newPassword.value)"
+        (blur)="passwordMatch(conPassword.value)"><br>
+        
+        <span class="error" *ngIf="newPassword.touched && newPassword.errors?.['required']">
+            Please enter new password
+        </span><br>
+
+        Confirm Password <br> 
+
+        <input type="text" #conPassword ="ngModel" ngModel name="confirmPassword" 
+         required (blur)="passwordMatch(conPassword.value)">
+         <br>
+
+         <span *ngIf="isMatch" class="error">New password and confirm password should match</span>
+        
+         <br><br>
+         
+        <div>
+            <button class="sbt-btn" (click)="submit(forgetPasswordForm.value)" [disabled]="!forgetPasswordForm.valid">Submit</button>
         </div>
+
     </form>
+
+    <br><br><br>
 </div>
