@@ -12,7 +12,7 @@
             UserName is required
         </span>
         <span class="error" *ngIf="userName.touched && userName.dirty
-         && userName.errors?.['pattern']">
+             && userName.errors?.['pattern']">
             Please Enter Alphabets Only
         </span>
         <br>
@@ -27,11 +27,12 @@
             password is required</span><br>
         <span class="error" *ngIf="password.touched && password.errors?.['pattern']">
             Please match Password formate</span><br>
-
+    
         <div>
             <button class="sbt-btn" (click)="submit(loginForm.value)">Submit</button>
         </div><br>
-        <button class="for-pass" class="sbt-btn" (click)="forgetPassword()" > Forget password </button>
+        <button class="for-pass" class="sbt-btn" (click)="forgetPassword()"> Forget password </button>
+    
     </form><br>
 
     <form *ngIf="!showLoginForm" #forgetPasswordForm="ngForm">
@@ -39,8 +40,8 @@
         New Password <br>
 
         <input type="text" #newPassword="ngModel" ngModel name="newPassWord" required 
-        (keyup)="newPasswordFiledValue(newPassword.value)"
-        (blur)="passwordMatch(conPassword.value)"><br>
+        
+        (blur)="newPasswordFiledValue(newPassword.value);newPasswordMatch()"><br>
         
         <span class="error" *ngIf="newPassword.touched && newPassword.errors?.['required']">
             Please enter new password

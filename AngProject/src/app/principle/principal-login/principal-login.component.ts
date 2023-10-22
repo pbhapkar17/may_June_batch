@@ -6,31 +6,40 @@ import { Component } from '@angular/core';
   styleUrls: ['./principal-login.component.scss']
 })
 export class PrincipalLoginComponent {
-  userName:any
+  userName: any
   // forGetPassword = false;
   showLoginForm = true;
-  newPassword :any;
-  confirmPassword :any;
-  isMatch :boolean = false
+  newPassword: any;
+  confirmPassword: any;
+  isMatch: boolean = false
   submit(form: any) {
     console.log(form);
 
   }
-  forgetPassword(){
+  forgetPassword() {
     this.showLoginForm = false;
   }
-  passwordMatch(confirmPassword :any){
-   
-     this.confirmPassword = confirmPassword;
 
-     if(this.newPassword ==  this.confirmPassword){
-             this.isMatch =false;
-     }else{
+  passwordMatch(confirmPassword?: any) {
+
+    this.confirmPassword = confirmPassword;
+
+    if (this.newPassword == this.confirmPassword) {
+      this.isMatch = false;
+    } else {
       this.isMatch = true;
-     }
-     
+    }
+
   }
-  newPasswordFiledValue(newPassValue:any){
+  newPasswordFiledValue(newPassValue: any) {
     this.newPassword = newPassValue;
+  }
+
+  newPasswordMatch(){
+    if (this.newPassword == this.confirmPassword) {
+      this.isMatch = false;
+    } else {
+      this.isMatch = true;
+    }
   }
 }
