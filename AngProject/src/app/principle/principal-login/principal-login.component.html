@@ -35,24 +35,28 @@
     
     </form><br>
 
+
+    <h2 *ngIf="!showLoginForm"> Forgot Password Form</h2><br>
     <form *ngIf="!showLoginForm" #forgetPasswordForm="ngForm">
 
         New Password <br>
 
         <input type="text" #newPassword="ngModel" ngModel name="newPassWord" required 
         
-        (blur)="newPasswordFiledValue(newPassword.value);newPasswordMatch()"><br>
-        
+        (blur)="passwordMatch(newPassword.value,conPassword.value)"><br>
+        <!--  (blur)="newPasswordFiledValue(newPassword.value);newPasswordMatch()" -->
         <span class="error" *ngIf="newPassword.touched && newPassword.errors?.['required']">
-            Please enter new password
+            Please enter new password,it is required
         </span><br>
 
         Confirm Password <br> 
 
         <input type="text" #conPassword ="ngModel" ngModel name="confirmPassword" 
-         required (blur)="passwordMatch(conPassword.value)">
+         required (blur)="passwordMatch( newPassword.value,conPassword.value)">
          <br>
-
+         <span class="error" *ngIf="conPassword.touched && conPassword.errors?.['required']">
+            Please enter confirm password,it is required
+        </span><br>
          <span *ngIf="isMatch" class="error">New password and confirm password should match</span>
         
          <br><br>

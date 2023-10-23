@@ -12,34 +12,42 @@ export class PrincipalLoginComponent {
   newPassword: any;
   confirmPassword: any;
   isMatch: boolean = false
-  submit(form: any) {
-    console.log(form);
 
-  }
+
   forgetPassword() {
     this.showLoginForm = false;
   }
 
-  passwordMatch(confirmPassword?: any) {
+  // passwordMatch(confirmPassword?: any) {
 
-    this.confirmPassword = confirmPassword;
-
-    if (this.newPassword == this.confirmPassword) {
+  //   this.confirmPassword = confirmPassword;
+  //   this.checkPass();
+  // }
+  passwordMatch(newPassword:any,confirmPassword:any){
+    if (newPassword == confirmPassword) {
       this.isMatch = false;
     } else {
       this.isMatch = true;
     }
-
   }
-  newPasswordFiledValue(newPassValue: any) {
-    this.newPassword = newPassValue;
-  }
+  // newPasswordFiledValue(newPassValue: any) {
+  //   this.newPassword = newPassValue;
+  // }
 
-  newPasswordMatch(){
-    if (this.newPassword == this.confirmPassword) {
-      this.isMatch = false;
-    } else {
-      this.isMatch = true;
-    }
+  // newPasswordMatch() {
+  //   this.checkPass();
+  // }
+
+  // checkPass() {
+  //   if (this.newPassword == this.confirmPassword) {
+  //     this.isMatch = false;
+  //   } else {
+  //     this.isMatch = true;
+  //   }
+  // }
+
+  submit(form: any) {
+    console.log(form);
+
   }
 }
