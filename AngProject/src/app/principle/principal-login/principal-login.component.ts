@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-principal-login',
@@ -13,6 +14,9 @@ export class PrincipalLoginComponent {
   confirmPassword: any;
   isMatch: boolean = false
 
+  constructor(private router:Router){
+
+  }
 
   forgetPassword() {
     this.showLoginForm = false;
@@ -48,6 +52,6 @@ export class PrincipalLoginComponent {
 
   submit(form: any) {
     console.log(form);
-
+       this.router.navigateByUrl('PrincipleMod/PrincipalSuccess')
   }
 }

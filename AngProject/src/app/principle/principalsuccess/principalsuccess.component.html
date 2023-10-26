@@ -1,0 +1,19 @@
+<p>Directive!</p>
+
+<!-- Structural directive 
+    1. *ngIf: To add/remove elements from DOM
+    2. *ngFor 
+    3. *ngSwitch-->
+
+  
+    <button (click)="showAddress()">Show Address</button>
+    <button (click)="toShowCity()">Show city</button>
+    <br>
+<div *ngIf="city">
+     Mumbai
+</div>
+
+<div *ngIf="showAddr">
+    A-903,NG Canary, Miraroad,Mumbai
+</div>
+
