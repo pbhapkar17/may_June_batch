@@ -6,8 +6,9 @@
     3. *ngSwitch-->
 
   
-    <button (click)="showAddress()">Show Address</button>
+    <button (click)="toshowAddress()">Show Address</button>
     <button (click)="toShowCity()">Show city</button>
+    <!-- <button (click)="toShowCars()">Show Cars</button> -->
     <br>
 <div *ngIf="city">
      Mumbai
@@ -17,3 +18,28 @@
     A-903,NG Canary, Miraroad,Mumbai
 </div>
 
+<!-- <div>
+{{cars}}
+</div> 
+for(let x of cars){
+
+}-->
+<ul>
+    <li>swift</li>
+    <li>Audi</li>
+    <li>Min cup</li>
+</ul>
+
+<ul *ngFor="let carName of cars">
+    <li>{{carName}}</li>
+</ul>
+
+<div>
+    <ul *ngFor="let student of students">
+        <li>{{student.name}} - {{student.age}}</li>
+    </ul>
+</div>
+
+<div *ngFor="let empData of emp">
+<p>{{empData.name.firstName}}</p>
+</div>
