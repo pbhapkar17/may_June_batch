@@ -1,0 +1,84 @@
+<p>directives works!</p>
+<!-- Structural directive 
+    1. *ngIf: To add/remove elements from DOM
+    2. *ngFor 
+    3. *ngSwitch-->
+
+
+    <button (click)="toshowAddress()">Show Address</button>
+    <button (click)="toShowCity()">Show city</button>
+    <!-- <button (click)="toShowCars()">Show Cars</button> -->
+    <br>
+    <div *ngIf="city">
+        Mumbai
+    </div>
+    
+    <div *ngIf="showAddr">
+        A-903,NG Canary, Miraroad,Mumbai
+    </div>
+    
+    <p *ngIf="amount">
+        Amount:{{amount}}
+    </p>
+    
+    <p *ngIf="age >= 18 && age < 60">
+        valid employee
+    </p>
+    
+    
+    <!-- <div>
+    {{cars}}
+    </div> 
+    for(let x of cars){
+    
+    }-->
+    <ul>
+        <li>swift</li>
+        <li>Audi</li>
+        <li>Min cup</li>
+    </ul>
+    {{cars}}
+    <ul *ngFor="let carName of cars">
+        <li>{{carName}}</li>
+    </ul>
+    
+    <div *ngFor="let student of students">
+        <ul>
+            <li>{{student.name}} - {{student.age}}</li>
+        </ul>
+    </div>
+    
+    <div *ngFor="let empData of emp">
+        <p>{{empData.name.firstName}}</p>
+    </div>
+    
+    
+    <div>
+        <table>
+            <tr *ngIf="showTable">
+                <th *ngFor="let headings of tableHeading">{{headings}}</th>
+            </tr>
+            <tr *ngFor="let student of students">
+                <td>{{student.name}}</td>
+                <td>{{student.age}}</td>
+                <td>{{student.city}}</td>
+                <button>show</button>
+            </tr>
+    
+        </table>
+    </div>
+    <input type="text" [(ngModel)]=inputValue>
+    <button (click)="inputBoxVal()">submit</button>
+    
+    <p *ngFor="let value of data">{{value}}</p>
+    
+    <div [ngSwitch]="color">
+        <p *ngSwitchCase="'green'">green</p>
+        <p *ngSwitchCase="'red'">Red</p>
+        <p *ngSwitchCase="'yellow'">yellow</p>
+    </div>
+    
+    
+    <br> <br>
+    <br> <br>
+    <br> <br>

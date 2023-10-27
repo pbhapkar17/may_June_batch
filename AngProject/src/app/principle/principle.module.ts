@@ -7,6 +7,7 @@ import { PrincipalLoginComponent } from './principal-login/principal-login.compo
 import { PrincipalSignUpComponent } from './principal-sign-up/principal-sign-up.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { PrincipalsuccessComponent } from './principalsuccess/principalsuccess.component';
+import { DirectivesComponent } from './directives/directives.component';
 console.log('princi');
 
 
@@ -15,7 +16,8 @@ console.log('princi');
     PrincipleHomeComponent,
     PrincipalLoginComponent,
     PrincipalSignUpComponent,
-    PrincipalsuccessComponent
+    PrincipalsuccessComponent,
+    DirectivesComponent
   ],
   
   imports: [

@@ -4,12 +4,14 @@ import { PrincipleHomeComponent } from './principle-home/principle-home.componen
 import { PrincipalSignUpComponent } from './principal-sign-up/principal-sign-up.component';
 import { PrincipalLoginComponent } from './principal-login/principal-login.component';
 import { PrincipalsuccessComponent } from './principalsuccess/principalsuccess.component';
+import { DirectivesComponent } from './directives/directives.component';
 
 const routes: Routes = [
   { path:'principleHome', component : PrincipleHomeComponent},
   { path: 'signUp', component : PrincipalSignUpComponent},
   { path:'login', component:PrincipalLoginComponent},
-  { path:'PrincipalSuccess', component :PrincipalsuccessComponent}
+  { path:'PrincipalSuccess', component :PrincipalsuccessComponent},
+  { path :'directives',component:DirectivesComponent}
 ];
 
 @NgModule({
