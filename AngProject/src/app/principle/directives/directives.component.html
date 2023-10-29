@@ -67,7 +67,7 @@
     
         </table>
     </div>
-    <input type="text" [(ngModel)]=inputValue>
+    <input type="text" [(ngModel)] = inputValue>
     <button (click)="inputBoxVal()">submit</button>
     
     <p *ngFor="let value of data">{{value}}</p>
@@ -78,7 +78,25 @@
         <p *ngSwitchCase="'yellow'">yellow</p>
     </div>
     
-    
+    <div [class.cls1] = "inputValue == 40" 
+         [class.cls2] = "inputValue == 50"
+         [class.cls3] = "inputValue == 60">
+       I scrored 90 marks...
+    </div>
+
+<div [ngClass]="rating == 4 ? 'ngcls1' : 'ngcls2' ">
+    I like pune
+</div>
+
+
+<p style=" background-color: antiquewhite;">
+    nbkjbkj knjnjn
+</p>
+
+<p [ngStyle]="{'background-color':getCss()}">
+    nbkjbkj knjnjn
+</p>
+
     <br> <br>
     <br> <br>
     <br> <br>

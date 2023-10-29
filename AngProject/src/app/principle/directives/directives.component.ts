@@ -9,6 +9,7 @@ export class DirectivesComponent {
 
   showAddr: boolean = false;
   city: boolean = false;
+  rating: any = 4;
   cars = ['Swift', 'jaguar', 'MiniCuper', 'Audi'];
   students = [
     { name: 'tushar', age: 20, city: "pune" },
@@ -35,10 +36,10 @@ export class DirectivesComponent {
 
   amount: any = 60000;  // boolean true - true ; data- true , null/undefined >>false
   age = 18;
-  showTable=true;
-  inputValue:any;
-  data : any[] = [];
-  color ="green";
+  showTable = true;
+  inputValue: any;
+  data: any[] = [];
+  color = "green";
 
   toshowAddress() {
     //this.showAddr = true;
@@ -51,8 +52,11 @@ export class DirectivesComponent {
   toshowCars() {
 
   }
-  inputBoxVal(){
-     console.log(this.inputValue);
-     this.data.push(this.inputValue)
+  inputBoxVal() {
+    console.log(this.inputValue);
+    this.data.push(this.inputValue)
+  }
+  getCss() {
+    return 'yellow';
   }
 }
