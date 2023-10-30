@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { DataService } from 'src/app/services/data.service';
 
 @Component({
   selector: 'app-principalsuccess',
@@ -8,5 +9,13 @@ import { Component } from '@angular/core';
 
 export class PrincipalsuccessComponent {
 
+  name : any;
+  
+  constructor(private dataService:DataService ){}
+  
+
+  ngOnInit(){
+    this.name =  this.dataService.formUserName;
+  }
 
 }

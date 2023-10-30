@@ -25,3 +25,11 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+
+data transmission technique:
+1.services : if want to travell data between components(having no relation between each , if components are not live )
+2.parent to child :if components having relation between them and both are live 
+3.child to parent :if components having relation between them and both are live 
+4.subjects:  if want to travel data between components(having no relation between each , if components are  live )
+5. viewChild :if want to share data between components who are live and dont have relation between them .

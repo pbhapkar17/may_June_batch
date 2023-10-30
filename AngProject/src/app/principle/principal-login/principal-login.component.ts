@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { DataService } from 'src/app/services/data.service';
 
 @Component({
   selector: 'app-principal-login',
@@ -14,7 +15,7 @@ export class PrincipalLoginComponent {
   confirmPassword: any;
   isMatch: boolean = false
 
-  constructor(private router:Router){
+  constructor(private router:Router , private dataService : DataService ){
 
   }
 
@@ -50,8 +51,10 @@ export class PrincipalLoginComponent {
   //   }
   // }
 
-  submit(form: any) {
-    console.log(form);
+  submit(formData: any) {
+    console.log(formData);
+    //set username into service
+      this.dataService.formUserName = formData.userName;
        this.router.navigateByUrl('PrincipleMod/PrincipalSuccess')
   }
 }
