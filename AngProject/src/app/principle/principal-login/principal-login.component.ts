@@ -52,9 +52,9 @@ export class PrincipalLoginComponent {
   // }
 
   submit(formData: any) {
-    console.log(formData);
-    //set username into service
+    console.log(formData);//{un:"",ps:""}
+    //setting username into service
       this.dataService.formUserName = formData.userName;
-       this.router.navigateByUrl('PrincipleMod/PrincipalSuccess')
+      this.router.navigateByUrl('PrincipleMod/PrincipalSuccess')
   }
 }

@@ -15,6 +15,7 @@ export class PrincipalsuccessComponent {
   
 
   ngOnInit(){
+    //getting of data fromservice
     this.name =  this.dataService.formUserName;
   }
 
