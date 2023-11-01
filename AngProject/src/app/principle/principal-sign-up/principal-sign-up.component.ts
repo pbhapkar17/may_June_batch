@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { DataService } from 'src/app/services/data.service';
 
 @Component({
   selector: 'app-principal-sign-up',
@@ -15,7 +16,7 @@ export class PrincipalSignUpComponent {
   datePattern = /^(0[1-9]|[1-2][0-9]|3[0-1])\/(0[1-9]|1[0-2])\/\d{4}$/;
   isGenderSelected: boolean = false;
   showPass = false;
-  constructor( public fb : FormBuilder){}
+  constructor( public fb : FormBuilder, public dataService:DataService){}
 
   ngOnInit(){
    this.formDetails();
@@ -34,15 +35,12 @@ export class PrincipalSignUpComponent {
      TC:[false,Validators.requiredTrue],
      gender:[''],
      cars:[],
-     customVal:['',this.removeWhiteSpace],
+     customVal:['',this.dataService.removeWhiteSpace],
      oldField:['',this.oldWordRestriction]
     })
   }
   
-  removeWhiteSpace(customValFieldValue : any){
-    let isInValid = customValFieldValue.value ? customValFieldValue.value?.trim().length == 0 : null
-    return isInValid ? {'whiteSpace':true}  : null;
-  }
+ 
 
   oldWordRestriction(inputValue: any) {
     //Old,OLD,oLd,OLd,olD....
@@ -50,6 +48,7 @@ export class PrincipalSignUpComponent {
     let isIncludeOld = inputValue1.includes('old');
     return isIncludeOld ? { 'oldWord': true } : null;
   }
+
   submit(){
     let gender = this.principalSignUpForm.value.gender
     if(gender){

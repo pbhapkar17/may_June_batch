@@ -15,6 +15,9 @@ export class DataService {
    //to write reusable code with a focused purpose, to use across multiple components in your application.
   //We can reuse the service at many places.
 
-
+  removeWhiteSpace(customValFieldValue : any){
+    let isInValid = customValFieldValue.value ? customValFieldValue.value?.trim().length == 0 : null
+    return isInValid ? {'whiteSpace':true}  : null;
+  }
   
   }
