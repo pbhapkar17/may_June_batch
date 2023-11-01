@@ -33,3 +33,11 @@ data transmission technique:
 3.child to parent :if components having relation between them and both are live 
 4.subjects:  if want to travel data between components(having no relation between each , if components are  live )
 5. viewChild :if want to share data between components who are live and dont have relation between them .
+
+2.Parent to child data transmission:
+parent compo
+child compo
+parent >> add selector of child component
+p>>>c
+p>>made input in parent 
+c>> @input() propertyName:any 
