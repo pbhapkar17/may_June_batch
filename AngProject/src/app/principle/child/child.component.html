@@ -1,2 +1,8 @@
 <p>child works!</p>
-{{dataFromParentCompo}}
+{{dataFromParentCompo}}<br><br>
+<input type="text" [(ngModel)]="data">
+<button (click)="submit()">submit</button>
+<br>
+<ul *ngFor="let color of colorsFromPrent">
+    <li>{{color}}</li>
+</ul>

@@ -1,11 +1,15 @@
 <p>parent works!</p>
-<input type="text" [(ngModel)]="name">  Name
-
-
+<input type="text" [(ngModel)]="name">  Name  <br>
+{{dataFromChildComponent}}
+{{studentDatafromChild?.name}}
 
 <br>
 --------------------------------------------------------
 
 
 
-<app-child [dataFromParentCompo]="name"></app-child>
+<app-child 
+[dataFromParentCompo] = "name" 
+(childDataEvent)="dataFromChild($event)"
+[colorsFromPrent]="colors" (studentEvent)="studentData($event)">
+</app-child>
