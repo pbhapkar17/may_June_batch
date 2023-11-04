@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { Subject } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -7,8 +8,8 @@ export class DataService {
 
    formUserName : any;
    inpBox : any;
-
-  constructor() { }
+   city = new Subject<string>();
+   constructor() { }
 
    //services: : ng g s serviceName
    //services are used to share data amoung compo's,also, 

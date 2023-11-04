@@ -1,4 +1,5 @@
 import { Component,EventEmitter,Input, Output } from '@angular/core';
+import { DataService } from 'src/app/services/data.service';
 
 @Component({
   selector: 'app-child',
@@ -8,19 +9,24 @@ import { Component,EventEmitter,Input, Output } from '@angular/core';
 export class ChildComponent {
    @Input() dataFromParentCompo:any;
    @Output() childDataEvent = new EventEmitter<any>();
-   data:any;
    @Input() colorsFromPrent:any;
+   @Output() studentEvent = new EventEmitter<any>();
 
-  student = {
+   data:any;
+    student = {
     name: "poonam",
     age: 30,
     city: "mumbai"
-  };
+     };
 
-  @Output() studentEvent = new EventEmitter<any>();
+   city:any;
+  constructor(private dataService: DataService){
 
+  }
    ngOnInit(){
- 
+      this.dataService.city.subscribe(cityName=>{
+         this.city = cityName;
+      })
    }
 
    submit(){

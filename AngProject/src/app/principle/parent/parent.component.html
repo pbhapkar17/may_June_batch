@@ -2,7 +2,8 @@
 <input type="text" [(ngModel)]="name">  Name  <br>
 {{dataFromChildComponent}}
 {{studentDatafromChild?.name}}
-
+<br>
+<button (click)="setSubjetData()"> click to set subject</button>
 <br>
 --------------------------------------------------------
 
@@ -13,3 +14,5 @@
 (childDataEvent)="dataFromChild($event)"
 [colorsFromPrent]="colors" (studentEvent)="studentData($event)">
 </app-child>
+---------------------------------------------
+<app-principalsuccess></app-principalsuccess>

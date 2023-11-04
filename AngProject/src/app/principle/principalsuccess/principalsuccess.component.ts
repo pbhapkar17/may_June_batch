@@ -18,5 +18,7 @@ export class PrincipalsuccessComponent {
     //getting of data fromservice
     this.name =  this.dataService.formUserName;
   }
-
+  setSub(){
+    this.dataService.city.next("Satara");
+  }
 }

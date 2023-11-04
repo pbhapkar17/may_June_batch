@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { DataService } from 'src/app/services/data.service';
 
 @Component({
   selector: 'app-parent',
@@ -11,6 +12,11 @@ export class ParentComponent {
 
    colors = ["green",'red','blue','white','pink'];
    studentDatafromChild:any;
+
+   constructor(private dataService: DataService){
+
+   }
+
    dataFromChild(data:any){
        console.log(data);
        this.dataFromChildComponent = data;
@@ -20,5 +26,7 @@ export class ParentComponent {
    console.log(studentD);
    this.studentDatafromChild=studentD
    }
-
+   setSubjetData(){
+      this.dataService.city.next("Mumbai");
+   }
 }
