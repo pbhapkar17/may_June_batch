@@ -18,4 +18,8 @@ export class LandingComponent {
     this.router.navigateByUrl('PrincipleMod/principleHome')
 
   }
+
+  subjectModule(){
+     this.router.navigateByUrl('subjectModule/sujectLanding')
+  }
 }

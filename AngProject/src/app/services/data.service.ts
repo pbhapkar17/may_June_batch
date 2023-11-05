@@ -9,6 +9,7 @@ export class DataService {
    formUserName : any;
    inpBox : any;
    city = new Subject<string>();
+   nameSubjectData = new Subject<string>();
    constructor() { }
 
    //services: : ng g s serviceName
