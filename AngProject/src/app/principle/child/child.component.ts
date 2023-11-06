@@ -20,10 +20,23 @@ export class ChildComponent {
      };
 
    city:any;
+   //constructor is not a lf cycle hook,it will call first then hooks will get invoked
   constructor(private dataService: DataService){
-
+    console.log("contructor calling");
+    
   }
+  //if component is having input bound properties then 
+  //ngOnchanges will get trigger first then ngOninit will get trigger
+  //repeatadly it will get trigger/call on every change of input bound property.
+  ngOnChanges(){
+      console.log('ng changes calling');
+      
+   }
+   //this will trigger first if compo dont have 
+   //input bound properties
+   //it will get invoked only once
    ngOnInit(){
+      console.log("on init calling");
       this.dataService.city.subscribe(cityName=>{
          this.city = cityName;
       })

@@ -8,9 +8,23 @@ import { DataService } from '../services/data.service';
   styleUrls: ['./landing.component.scss']
 })
 export class LandingComponent {
+
   inputBoxVal:any
+
   constructor(private router:Router,
-    private dataService: DataService){}
+    private dataService: DataService){
+      console.log("constructer calling..");
+      
+    }
+
+    ngOnChanges(){
+      console.log('ng changes calling..');
+      
+   }
+//this compo dont hv inp bound property so oninit will invoked first
+   ngOnInit(){
+      console.log("on init calling..");
+   }
 
   principleModLoad(){
     console.log( this.inputBoxVal);

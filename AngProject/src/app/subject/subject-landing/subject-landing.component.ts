@@ -24,8 +24,6 @@ export class SubjectLandingComponent {
    ngAfterViewInit(){
      this.paraEleRef.nativeElement.innerHTML = 'Patil';
     console.log(this.paraEleRef);
-
-    
    }
 
 
@@ -42,10 +40,11 @@ export class SubjectLandingComponent {
 
 
   //@ViewChild is a decorator that is used to get
-  // a reference to a child component or an element within a parent component.
+  // a reference to a child component
+  // or an element within a parent component.
   // It allows the parent component to access 
   //and interact with the properties, 
-  //methods, and events of the child component or element.
+  //methods, and events of the child component or element within a parent component.
 
 viewChild(){
   this.subject1ComponentRef.dataInSubject1Compo = this.subjectForm.value.name;
