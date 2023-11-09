@@ -4,4 +4,15 @@
     <button (click)="principleModLoad()">Priciple</button><br><br>
     <button routerLink="/PrincipleMod/parent">Parent comoponet</button>
     <button (click)="subjectModule()">Subject Module</button>
+
+
+    <div>
+        {{name | uppercase}} <br>
+        {{name | lowercase}} <br>
+        {{ date | date}}<br>
+        {{ date | date : 'fullDate'}}<br>
+        {{ date | date : 'shortDate'}}<br>
+    </div>
+
+<button routerLink="/table">Table</button>
 </div>

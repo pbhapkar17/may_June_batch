@@ -10,7 +10,8 @@ import { DataService } from '../services/data.service';
 export class LandingComponent {
 
   inputBoxVal:any
-
+  name : string = "poonam";
+  date = "04/04/1990";
   constructor(private router:Router,
     private dataService: DataService){
       console.log("constructer calling..");

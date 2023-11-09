@@ -1,0 +1,17 @@
+<div  class="inpt">
+    <input type="text" placeholder="type here to search..."
+     [(ngModel)] = "searchedValue">
+</div>
+
+
+<table class="main">
+    <tr>
+        <th *ngFor=" let heading of tableHeading">{{heading}}</th>
+    </tr>
+    <tr *ngFor = "let student of students | search : searchedValue">
+        <td>{{student.name}}</td>
+        <td>{{student.age}}</td>
+        <td>{{student.city}}</td>
+    </tr>
+    
+</table>
