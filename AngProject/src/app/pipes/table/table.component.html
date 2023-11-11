@@ -15,3 +15,6 @@
     </tr>
     
 </table>
+<br>
+<input type="text" [(ngModel)]="amount"> Amount 
+<p *ngIf="amount">{{amount | currency}} $</p>

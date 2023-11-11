@@ -22,5 +22,5 @@ export class TableComponent {
   ];
 
   searchedValue:any;
-
+  amount:any;
 }
