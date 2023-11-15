@@ -1,0 +1,29 @@
+{
+  "principal": [
+    {
+      "city": "Pune",
+      "name": "Pooja",
+      "mob": 99999,
+      "id": 2
+    },
+    {
+      "city": "Pune",
+      "name": "Rakesh",
+      "mob": 4499999,
+      "id": 3
+    },
+    {
+      "userName": "Poonam",
+      "emailId": "poonambhapkar34@gmail.com",
+      "mobNo": "98989898",
+      "dob": "04/04/1992",
+      "TC": true,
+      "gender": "Female",
+      "cars": "Swift",
+      "customVal": "",
+      "oldField": "",
+      "id": 4
+    }
+  ],
+  "student": []
+}

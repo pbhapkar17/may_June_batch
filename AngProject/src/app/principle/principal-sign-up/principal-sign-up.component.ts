@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { ApiCallService } from 'src/app/services/api-call.service';
 import { DataService } from 'src/app/services/data.service';
 
 @Component({
@@ -16,7 +17,8 @@ export class PrincipalSignUpComponent {
   datePattern = /^(0[1-9]|[1-2][0-9]|3[0-1])\/(0[1-9]|1[0-2])\/\d{4}$/;
   isGenderSelected: boolean = false;
   showPass = false;
-  constructor( public fb : FormBuilder, public dataService:DataService){}
+  constructor( public fb : FormBuilder, public dataService:DataService,
+    private apiCallService:ApiCallService){}
 
   ngOnInit(){
    this.formDetails();
@@ -53,6 +55,10 @@ export class PrincipalSignUpComponent {
     let gender = this.principalSignUpForm.value.gender
     if(gender){
       console.log('f data',this.principalSignUpForm.value);
+      this.apiCallService.postApiCall(this.principalSignUpForm.value).subscribe(response=>{
+        console.log("res>>",response);
+        
+      })
     }
     else{
       this.isGenderSelected = true;
@@ -62,12 +68,17 @@ export class PrincipalSignUpComponent {
     
   }
 
-  calYear(){
+  calYear(event:any){
+    console.log('event',event.target.value);
+    
+    if(event.target.value.length > 9){
       let dobFieldValue = this.principalSignUpForm.value.dob;
       let todayFullYear = this.todayDate.getFullYear();
       let splitedDate = dobFieldValue?.split('/');
       let usersFullYear = splitedDate[2];
       this.userAge = todayFullYear - usersFullYear;
+    }
+     
   }
   gender(){
     this.isGenderSelected = false;

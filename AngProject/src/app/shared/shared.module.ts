@@ -4,7 +4,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CharOnlyDirective } from '../directives/char-only.directive';
 import { CurrencyPipe } from '../pipes/currency.pipe';
 import { SearchPipe } from '../pipes/search.pipe';
-
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -16,7 +16,8 @@ import { SearchPipe } from '../pipes/search.pipe';
   imports: [
     CommonModule,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   exports:[
     ReactiveFormsModule,
@@ -24,6 +25,7 @@ import { SearchPipe } from '../pipes/search.pipe';
     CharOnlyDirective,
     CurrencyPipe,
     SearchPipe,
+    HttpClientModule
 
   ]
 })

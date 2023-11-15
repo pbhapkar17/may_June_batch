@@ -24,8 +24,8 @@
         <span class="err" *ngIf="principalSignUpForm.get('emailId')?.errors?.['pattern']">Enter valid mail Id</span>
         <br>
 
-        <label for="">Birth Date</label><br>
-        <input type="text" placeholder="dd/mm/yyyy" formControlName="dob" (blur)="calYear()">
+        <label>Birth Date</label><br>
+        <input type="text" placeholder="dd/mm/yyyy"  formControlName="dob" (keyup)="calYear($event)">
         <span>Your age : {{userAge}}</span><br>
         <span class="err" *ngIf="principalSignUpForm.get('dob')?.errors?.['pattern']"> Please enter Date in proper
             formate</span>
