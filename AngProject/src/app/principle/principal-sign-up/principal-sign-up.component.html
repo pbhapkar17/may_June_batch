@@ -47,7 +47,7 @@
             <label for=""> password</label>
         </div>
         <div>
-            <input [type]="showPass ? 'text' : 'password'">
+            <input [type]="showPass ? 'text' : 'password'" formControlName="password">
             <span class="p-viewer" *ngIf="showPass" (click)="showPassword()">
                 <i class="bi bi-eye"></i>
             </span>

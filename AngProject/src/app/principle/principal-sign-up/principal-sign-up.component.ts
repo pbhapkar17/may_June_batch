@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 import { ApiCallService } from 'src/app/services/api-call.service';
 import { DataService } from 'src/app/services/data.service';
 
@@ -18,7 +19,7 @@ export class PrincipalSignUpComponent {
   isGenderSelected: boolean = false;
   showPass = false;
   constructor( public fb : FormBuilder, public dataService:DataService,
-    private apiCallService:ApiCallService){}
+    private apiCallService:ApiCallService, public router:Router){}
 
   ngOnInit(){
    this.formDetails();
@@ -38,7 +39,8 @@ export class PrincipalSignUpComponent {
      gender:[''],
      cars:[],
      customVal:['',this.dataService.removeWhiteSpace],
-     oldField:['',this.oldWordRestriction]
+     oldField:['',this.oldWordRestriction],
+     password:[]
     })
   }
   
@@ -57,7 +59,10 @@ export class PrincipalSignUpComponent {
       console.log('f data',this.principalSignUpForm.value);
       this.apiCallService.postApiCall(this.principalSignUpForm.value).subscribe(response=>{
         console.log("res>>",response);
-        
+        if(response){
+          alert('Data submitted Successfuly...!!');
+          this.router.navigateByUrl('/PrincipleMod/PrincipalSuccess');
+        }
       })
     }
     else{

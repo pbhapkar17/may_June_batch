@@ -23,6 +23,31 @@
       "customVal": "",
       "oldField": "",
       "id": 4
+    },
+    {
+      "userName": "Jaychandra",
+      "emailId": "jay@gmail.com",
+      "mobNo": "787878778",
+      "dob": "05/01/1990",
+      "TC": true,
+      "gender": "Male",
+      "cars": "Jaguar",
+      "customVal": "abc",
+      "oldField": "abc",
+      "id": 5
+    },
+    {
+      "userName": "Priyanka",
+      "emailId": "priya@yahoo.com",
+      "mobNo": "8888888",
+      "dob": "",
+      "TC": true,
+      "gender": "Female",
+      "cars": "Swift",
+      "customVal": "",
+      "oldField": "",
+      "password": "Priya@123",
+      "id": 6
     }
   ],
   "student": []
