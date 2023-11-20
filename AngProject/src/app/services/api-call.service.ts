@@ -5,7 +5,7 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root'
 })
 export class ApiCallService {
- 
+
   constructor(private httpClient: HttpClient) { }
 
   url = "http://localhost:3000/principal";
@@ -15,8 +15,9 @@ export class ApiCallService {
     return this.httpClient.post(this.url, formData);//request body/payload/json data{}
   }
 
-  getApiCall() {
-    return this.httpClient.get(this.url);
+  getApiCall(id?:number) {
+    let url = id ? this.url + "/" + id : this.url;
+    return this.httpClient.get(url);
   }
 
   deletApiCall(id:number) {
@@ -24,4 +25,9 @@ export class ApiCallService {
      return this.httpClient.delete(deleteUrl);
   }
 
+  putApiCall(id:any,data:any) {
+    let url = this.url + "/" + id ;
+     return this.httpClient.put(url,data)
+  }
+ 
 }

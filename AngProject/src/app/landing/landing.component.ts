@@ -56,4 +56,16 @@ export class LandingComponent {
          
      })
   }
+
+ async putApi(){
+      let id = 6;
+      // this.apiCallService.getApiCall(id).subscribe(rec=>{
+      //   console.log("6 id rec",rec);
+      //   this.dataService.recordTobeUpdate = rec;
+      //   this.dataService.idToUpdate = id;
+      // })
+     this.dataService.recordTobeUpdate = await this.apiCallService.getApiCall(id).toPromise()
+     this.dataService.idToUpdate = id;
+     this.router.navigateByUrl("/PrincipleMod/signUp");
+  }
 }

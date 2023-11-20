@@ -10,6 +10,9 @@ export class DataService {
    inpBox : any;
    city = new Subject<string>();
    nameSubjectData = new Subject<string>();
+   recordTobeUpdate :any;
+    idToUpdate: any;
+
    constructor() { }
 
    //services: : ng g s serviceName

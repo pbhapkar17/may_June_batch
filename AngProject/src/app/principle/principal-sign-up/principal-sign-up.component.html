@@ -92,7 +92,8 @@
         <input type="text" maxlength="15" appCharOnly> Char only directive
         <br><br>
 
-        <button (click)="submit()" [disabled]="!principalSignUpForm.valid"> Submit</button>
+        <button (click)="submit()" *ngIf="!recordToUpdate" [disabled]="!principalSignUpForm.valid"> Submit</button>
+        <button (click)="update()" *ngIf="recordToUpdate"> Update </button>
     </form>
 </div>
 

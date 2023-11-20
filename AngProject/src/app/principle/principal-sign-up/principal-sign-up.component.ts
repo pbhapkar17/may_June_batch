@@ -18,10 +18,16 @@ export class PrincipalSignUpComponent {
   datePattern = /^(0[1-9]|[1-2][0-9]|3[0-1])\/(0[1-9]|1[0-2])\/\d{4}$/;
   isGenderSelected: boolean = false;
   showPass = false;
+  recordToUpdate :any;
+  id :any;
   constructor( public fb : FormBuilder, public dataService:DataService,
     private apiCallService:ApiCallService, public router:Router){}
 
   ngOnInit(){
+    this.recordToUpdate = this.dataService.recordTobeUpdate;
+    this.id = this.dataService.idToUpdate;
+    console.log(" this.recordUpdate", this.recordToUpdate);
+    
    this.formDetails();
    console.log(this.todayDate,);
 
@@ -30,17 +36,17 @@ export class PrincipalSignUpComponent {
 
   formDetails(){
     this.principalSignUpForm = this.fb.group({
-      userName : ['Poonam',[Validators.maxLength(10),Validators.minLength(5),Validators.pattern('[a-zA-Z ]+')]],
-      emailId:[,[Validators.pattern(/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/)]],
-      mobNo:['',[Validators.pattern('[0-9+]*')]],
+      userName : [this.recordToUpdate ? this.recordToUpdate.userName : '',[Validators.maxLength(10),Validators.minLength(5),Validators.pattern('[a-zA-Z ]+')]],
+      emailId:[this.recordToUpdate ? this.recordToUpdate.emailId : '',[Validators.pattern(/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/)]],
+      mobNo:[this.recordToUpdate ? this.recordToUpdate.mobNo : '',[Validators.pattern('[0-9+]*')]],
      // dob:['',[Validators.pattern(/^(0[1-9]|[1-2][0-9]|3[0-1])\/(0[1-9]|1[0-2])\/\d{4}$/)]]
-     dob:['',[Validators.pattern(this.datePattern)]],
-     TC:[false,Validators.requiredTrue],
-     gender:[''],
-     cars:[],
-     customVal:['',this.dataService.removeWhiteSpace],
-     oldField:['',this.oldWordRestriction],
-     password:[]
+     dob:[this.recordToUpdate ? this.recordToUpdate.dob : '',[Validators.pattern(this.datePattern)]],
+     TC: [this.recordToUpdate ? this.recordToUpdate.TC :"",Validators.requiredTrue],
+     gender:[this.recordToUpdate ? this.recordToUpdate.gender : ''],
+     cars:[this.recordToUpdate ? this.recordToUpdate.cars : ''],
+     customVal:[this.recordToUpdate ? this.recordToUpdate.customVal : '',this.dataService.removeWhiteSpace],
+     oldField:[this.recordToUpdate ? this.recordToUpdate.oldField : '',this.oldWordRestriction],
+     password:[this.recordToUpdate ? this.recordToUpdate.password : '']
     })
   }
   
@@ -73,8 +79,16 @@ export class PrincipalSignUpComponent {
     
   }
 
+  update(){
+    this.apiCallService.putApiCall(this.id, this.principalSignUpForm.value).subscribe(res=>{
+      console.log(res);
+    })
+    alert('Data updated Successfuly...!!');
+    this.router.navigateByUrl('/PrincipleMod/PrincipalSuccess');
+  }
+
   calYear(event:any){
-    console.log('event',event.target.value);
+    console.log('event',event.target.value);  
     
     if(event.target.value.length > 9){
       let dobFieldValue = this.principalSignUpForm.value.dob;
