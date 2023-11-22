@@ -17,7 +17,7 @@ export class ApiCallService {
 
   getApiCall(id?:number) {
     let url = id ? this.url + "/" + id : this.url;
-    return this.httpClient.get(url);
+    return this.httpClient.get(url); //"http://localhost:3000/principal/2"
   }
 
   deletApiCall(id:number) {
