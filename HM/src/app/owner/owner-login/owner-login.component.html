@@ -1,1 +1,20 @@
-<p>owner-login works!</p>
+<div>
+    <h2>Login Form</h2>
+    <form>
+        <mat-form-field >
+            <mat-label>User Name</mat-label>
+            <input type="text" matInput>
+            <mat-hint>Please enter User Name </mat-hint>
+            <mat-error>User Name is <strong>required</strong></mat-error>
+        </mat-form-field>
+
+        <br>
+        <mat-form-field >
+            <mat-label>Password</mat-label>
+            <input type="text" matInput>
+        </mat-form-field>
+        <br>
+        <button mat-raised-button color="accent">Login</button>
+        <button mat-raised-button color="warn">New User?</button>
+    </form>
+</div>
