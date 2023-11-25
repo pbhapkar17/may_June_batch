@@ -1,0 +1,96 @@
+<div class="backImage"> 
+    <button class="backBtm" routerLink="/ownerMod/ownerLogin">Back</button> 
+ 
+    <form [formGroup]="sinupForm" class="formAlinment"> 
+       <h1>Owner Sing Up</h1> 
+       <div> 
+        <mat-form-field> 
+            <mat-label>Enter The First Name</mat-label> 
+           <input type="text" matInput formControlName="firstName" required> 
+           <mat-hint *ngIf="!sinupForm.get('userName')?.touched" class="hint">Please enter First Name </mat-hint> 
+            <mat-error *ngIf="sinupForm.get('firstName')?.hasError('required')">User Name is <strong>required</strong></mat-error> 
+           </mat-form-field> 
+       </div> 
+      
+      <div> 
+        <mat-form-field> 
+            <mat-label>Enter The Middle Name</mat-label> 
+           <input type="text" matInput formControlName="midName" required> 
+           <mat-hint *ngIf="!sinupForm.get('userName')?.touched"class="hint" >Please enter Middle Name </mat-hint> 
+            <mat-error *ngIf="sinupForm.get('midName')?.hasError('required')">User Name is <strong>required</strong></mat-error> 
+           </mat-form-field> 
+       </div> 
+       <div> 
+        <mat-form-field> 
+            <mat-label>Enter The last Name</mat-label> 
+           <input type="text" matInput formControlName="lastName" required> 
+           <mat-hint *ngIf="!sinupForm.get('userName')?.touched" class="hint">Please enter Last Name </mat-hint> 
+            <mat-error *ngIf="sinupForm.get('lastName')?.hasError('required')">User Name is <strong>required</strong></mat-error> 
+           </mat-form-field> 
+       </div> 
+ 
+       <div> 
+        <mat-form-field > 
+            <mat-label>Enter The Email Id</mat-label> 
+            <input matInput formControlName="email" type="text" required> 
+            <mat-hint class="hint" *ngIf="!sinupForm.get('userName')?.touched">Please enter your email address</mat-hint> 
+            <mat-error *ngIf="sinupForm.get('email')?.hasError('required')">Email is <strong>required</strong></mat-error> 
+             <mat-error *ngIf="sinupForm.get('email')?.hasError('pattern')">Please enter a valid email address</mat-error> 
+          </mat-form-field> 
+       </div> 
+ 
+       <div> 
+        <mat-form-field> 
+            <mat-label>Enter Pan Number</mat-label> 
+           <input type="text" matInput formControlName="panNumber" required> 
+           <mat-hint *ngIf="!sinupForm.get('userName')?.touched" class="hint">Please enter Last Name </mat-hint> 
+            <mat-error *ngIf="sinupForm.get('panNumber')?.hasError('required')">User Name is <strong>required</strong></mat-error> 
+           </mat-form-field> 
+       </div> 
+       <div> 
+        <mat-form-field appearance="fill"> 
+            <mat-label>Mobile Number</mat-label> 
+            <input matInput formControlName="mobileNumber" placeholder="+91" maxlength="13" required> 
+            <mat-hint class="hint" *ngIf="!sinupForm.get('userName')?.touched">Please enter mobile number</mat-hint> 
+            <mat-error *ngIf="sinupForm.get('mobileNumber')?.hasError('required')">Mobile Number is required</mat-error> 
+            <mat-error *ngIf="sinupForm.get('mobileNumber')?.hasError('pattern')">Invalid mobile number</mat-error> 
+          </mat-form-field> 
+       </div> 
+ 
+       <div> 
+        <mat-radio-group formControlName="gender"> 
+           
+               <mat-label>Gender</mat-label> 
+                <mat-radio-button value="male">Male</mat-radio-button> 
+                <mat-radio-button value="female">Female</mat-radio-button> 
+                <mat-radio-button value="other">Other</mat-radio-button> 
+                <mat-error *ngIf="sinupForm.get('gender')?.hasError('required')">Gender is <strong>required</strong></mat-error> 
+              </mat-radio-group> 
+           
+       
+      </div> 
+ 
+       <div> 
+        <mat-form-field > 
+            <mat-label>Enter The User Name </mat-label> 
+            <input matInput formControlName="userName" type="text" required> 
+            <mat-hint class="hint"*ngIf="!sinupForm.get('userName')?.touched">Enter the User Name</mat-hint> 
+            <mat-error *ngIf="sinupForm.get('userName')?.hasError('required')">User Name is <strong>required</strong></mat-error> 
+            <mat-error *ngIf="sinupForm.get('userName')?.hasError('pattern')">Please enter a valid userName</mat-error> 
+          </mat-form-field> 
+       </div> 
+ 
+       <div> 
+        <mat-form-field > 
+            <mat-label>Enter The Password </mat-label> 
+            <input matInput formControlName="pass" [type]="showpass ? 'text' : 'Password'" required> 
+            <mat-hint class="hint" *ngIf="!sinupForm.get('userName')?.touched">Enter the Password</mat-hint> 
+            <mat-error *ngIf="sinupForm.get('pass')?.hasError('required')">password is <strong>required</strong></mat-error> 
+            <mat-error *ngIf="sinupForm.get('pass')?.hasError('minlength')">password should be at least 8 characters long</mat-error> 
+          </mat-form-field> 
+       </div> 
+ 
+ 
+       <button mat-raised-button color="accent" (click)="submitSingUpForm()">Owner Register</button> 
+    </form> 
+</div>

@@ -1,10 +1,11 @@
 <div>
     <h2>Login Form</h2>
-    <form>
+    <form [formGroup]="loginForm" class="formAlinment">
         <mat-form-field >
             <mat-label>User Name</mat-label>
-            <input type="text" matInput>
-            <mat-hint>Please enter User Name </mat-hint>
+            <input type="text" matInput formControlName="userName">
+          
+            <mat-hint *ngIf="!loginForm.get('userName')?.touched">Please enter User Name </mat-hint>
             <mat-error>User Name is <strong>required</strong></mat-error>
         </mat-form-field>
 
@@ -12,9 +13,14 @@
         <mat-form-field >
             <mat-label>Password</mat-label>
             <input type="text" matInput>
+            <mat-icon (click)=""  matSuffix>visibility_off</mat-icon>
+            <mat-hint *ngIf="!loginForm.get('userName')?.touched" class="hint">Please Enter Password</mat-hint> 
+            <mat-error>Password is <strong>required</strong></mat-error> 
+       
         </mat-form-field>
         <br>
+    
         <button mat-raised-button color="accent">Login</button>
-        <button mat-raised-button color="warn">New User?</button>
+        <button mat-raised-button color="warn" routerLink="/signUp">New User?</button>
     </form>
 </div>

@@ -1,0 +1,22 @@
+.backImage{ 
+    background-image: url('~src/assets/image/hotel/adminlogin.avif'); 
+    height: 1000px; 
+    width: 1350px; 
+    background-repeat: no-repeat; 
+    position:absolute; 
+      background-size: cover; 
+} 
+ 
+.formAlinment{ 
+    border: 2px solid black; 
+    background-image: url('~src/assets/image/hotel/formbakk.jpg'); 
+    width: 400px; 
+    min-height: 300px; 
+    margin: 20px; 
+    text-align: center; 
+    position: relative; 
+    top: 100px; 
+    padding: 5px 5px; 
+    left: 90px; 
+    margin: auto; 
+  }
