@@ -6,13 +6,15 @@ import { OwnerLoginComponent } from './owner-login/owner-login.component';
 import { SharedModule } from '../shared/shared.module';
 import { OwnerSigUpComponent } from './owner-sig-up/owner-sig-up.component';
 import { HotelRegistrationComponent } from './hotel-registration/hotel-registration.component';
+import { OwnerSuccessComponent } from './owner-success/owner-success.component';
 
 
 @NgModule({
   declarations: [
     OwnerLoginComponent,
     OwnerSigUpComponent,
-    HotelRegistrationComponent
+    HotelRegistrationComponent,
+    OwnerSuccessComponent
   ],
   imports: [
     CommonModule,

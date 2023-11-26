@@ -12,15 +12,15 @@
         <br>
         <mat-form-field >
             <mat-label>Password</mat-label>
-            <input type="text" matInput>
-            <mat-icon (click)=""  matSuffix>visibility_off</mat-icon>
-            <mat-hint *ngIf="!loginForm.get('userName')?.touched" class="hint">Please Enter Password</mat-hint> 
+            <input type="text" matInput [type]="showpass ? 'text' : 'password'"  formControlName="password">
+            <mat-icon (click)="showPassword()"  matSuffix>visibility_off</mat-icon>
+            <mat-hint *ngIf="!loginForm.get('password')?.touched" class="hint">Please Enter Password</mat-hint> 
             <mat-error>Password is <strong>required</strong></mat-error> 
        
         </mat-form-field>
         <br>
     
-        <button mat-raised-button color="accent">Login</button>
+        <button mat-raised-button color="accent" (click)="login()">Login</button>
         <button mat-raised-button color="warn" routerLink="/signUp">New User?</button>
     </form>
 </div>

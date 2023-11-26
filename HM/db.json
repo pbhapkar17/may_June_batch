@@ -1,7 +1,35 @@
 {
-  "admin" : [],
-  "owner" : [],
-  "user" : [],
-  "hotelDetails":[],
-  "hotelBooking":[]
+  "admin": [],
+  "owner": [
+    {
+      "userName": "Poonam",
+      "email": "poonam@gmail.com",
+      "panNumber": "gthff4444p",
+      "mobileNumber": "98989898",
+      "gender": "female",
+      "password": "poonam$34",
+      "id": 1
+    },
+    {
+      "userName": "Pooja",
+      "email": "pooja@gmail.com",
+      "panNumber": "gthff4444p",
+      "mobileNumber": "98989898",
+      "gender": "female",
+      "password": "pooja$34",
+      "id": 1
+    },
+    {
+      "userName": "om",
+      "email": "om@gmail.com",
+      "panNumber": "dfghj56567p",
+      "mobileNumber": "56565656",
+      "gender": "female",
+      "password": "om$34",
+      "id": 1
+    }
+  ],
+  "user": [],
+  "hotelDetails": [],
+  "hotelBooking": []
 }
