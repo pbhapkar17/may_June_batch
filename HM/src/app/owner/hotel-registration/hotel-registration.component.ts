@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { ApiCallService } from 'src/app/commonScreens/commonServces/api-call.service';
 
 @Component({
   selector: 'app-hotel-registration',
@@ -12,8 +13,9 @@ export class HotelRegistrationComponent {
   
   
   constructor(private fb:FormBuilder ,
-    //private apiCallService:ApiCallService,
+    private apiCallService:ApiCallService,
     private router:Router){} 
+    
 ngOnInit(){ 
   this.formDetails() 
 } 
@@ -40,14 +42,15 @@ formDetails(){
 } 
  
  
-newHotel(){ 
+newHotelRegistration(){ 
+  let endPoint = "hotelDetails";
   console.log(this.newHoteRegister.value); 
-  // this.apiCallService.postApiCall(this.newHoteRegister.value).subscribe(res=>{ 
-  //   console.log("responce::>>",res); 
-  //   if(res){ 
-  //     alert('Data submitted Successfuly...!!'); 
-  //     this.router.navigateByUrl('/ownerMod/ownerSucces'); 
-  //   } 
-  // }) 
+  this.apiCallService.postApiCall(endPoint,this.newHoteRegister.value).subscribe(res=>{ 
+    console.log("responce::>>",res); 
+   // if(res){ 
+      alert('Hotel registered Successfuly...!!'); 
+      this.router.navigateByUrl('/ownerMod/ownerSucces'); 
+   // } 
+  }) 
 } 
 }

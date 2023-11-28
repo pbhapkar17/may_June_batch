@@ -14,7 +14,7 @@
         <mat-form-field appearance="fill"> 
             <mat-label> Owner Mobile Number</mat-label> 
             <input matInput formControlName="mobileNumber" placeholder="+91" maxlength="13" required> 
-            <mat-hint class="hint" *ngIf="!newHoteRegister.get('userName')?.touched">Please enter mobile number</mat-hint> 
+            <mat-hint class="hint" *ngIf="!newHoteRegister.get('mobileNumber')?.touched">Please enter mobile number</mat-hint> 
             <mat-error *ngIf="newHoteRegister.get('mobileNumber')?.hasError('required')">Mobile Number is required</mat-error> 
             <mat-error *ngIf="newHoteRegister.get('mobileNumber')?.hasError('pattern')">Invalid mobile number</mat-error> 
           </mat-form-field> 
@@ -72,28 +72,28 @@
           <option value="9">9</option> 
           <option value="10">10</option> 
         </select> 
-        <mat-error *ngIf="newHoteRegister.get('Rooms')?.hasError('required')">Hotel Menu is <strong>required</strong></mat-error> 
+        <mat-error *ngIf="newHoteRegister.get('rooms')?.hasError('required')">Hotel Menu is <strong>required</strong></mat-error> 
   </mat-form-field> 
  
       <div> 
         <mat-form-field > 
             <mat-label>Enter The Password </mat-label> 
             <input matInput formControlName="pass" type="text" required> 
-            <mat-hint class="hint" *ngIf="!newHoteRegister.get('userName')?.touched">Enter the Password</mat-hint> 
+            <mat-hint class="hint" *ngIf="!newHoteRegister.get('pass')?.touched">Enter the Password</mat-hint> 
             <mat-error *ngIf="newHoteRegister.get('pass')?.hasError('required')">password is <strong>required</strong></mat-error> 
             <mat-error *ngIf="newHoteRegister.get('pass')?.hasError('minlength')">password should be at least 8 characters long</mat-error> 
           </mat-form-field> 
        </div> 
- 
+<!--  
        <div> 
     
        <mat-checkbox class="example-margin" formControlName="checkBox" >I agree all statements in Terms and Conditions </mat-checkbox> 
         <mat-error *ngIf="newHoteRegister.get('checkBox')?.hasError('required')">Please accept the term and Conditions</mat-error> 
  
-       </div> 
+       </div>  -->
        
  
-       <button mat-raised-button color="accent" (click)="newHotel()" >Submit</button> 
+       <button mat-raised-button color="accent" (click)="newHotelRegistration()" >Submit</button> 
  
    </div> 
 </form> 

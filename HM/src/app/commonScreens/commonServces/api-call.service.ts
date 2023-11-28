@@ -5,6 +5,7 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root'
 })
 export class ApiCallService {
+
    url = "http://localhost:3000";
   constructor(private httpClient: HttpClient) { }
 
@@ -18,4 +19,5 @@ export class ApiCallService {
    let url = this.url + "/" + endPoint;
    return this.httpClient.get(url);
   }
+
 }

@@ -18,10 +18,12 @@ export class OwnerLoginComponent {
  
  constructor(private fb:FormBuilder,private router:Router,private apiCallService: ApiCallService,
   ){} 
+
  ngOnInit(){ 
   this.formDetails(); 
   this.getOwnerData();
  } 
+
  formDetails(){ 
  this.loginForm=this.fb.group({ 
   userName :["",[Validators.required]], 
@@ -56,6 +58,7 @@ login(){
     
     })
   }
+
   if(matchedObj){
     this.router.navigateByUrl('owner/ownerSuccess');
   }

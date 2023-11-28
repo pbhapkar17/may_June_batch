@@ -30,6 +30,21 @@
     }
   ],
   "user": [],
-  "hotelDetails": [],
+  "hotelDetails": [
+    {
+      "title": "test",
+      "author": "me",
+      "name": "pooja",
+      "address": "Pune",
+      "id": 1
+    },
+    {
+      "title": "test",
+      "author": "me",
+      "name": "pooja",
+      "address": "Pune",
+      "id": 2
+    }
+  ],
   "hotelBooking": []
 }
