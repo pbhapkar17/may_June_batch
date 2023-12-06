@@ -1,7 +1,96 @@
-{ 
-"admin" : [],
-"owner " : [],
-"user" : [],
-"hotelDetails":[],
-"hotelBooking":[]
+{
+  "admin": [],
+  "owner": [
+    {
+      "userName": "poonam",
+      "email": "poonam@gmail.com",
+      "panNumber": "gthff4444p",
+      "mobileNumber": "98989898",
+      "gender": "female",
+      "password": "poonam$34",
+      "id": 1
+    },
+    {
+      "userName": "Pooja",
+      "email": "pooja@gmail.com",
+      "panNumber": "gthff4444p",
+      "mobileNumber": "98989898",
+      "gender": "female",
+      "password": "pooja$34",
+      "id": 1
+    },
+    {
+      "userName": "om",
+      "email": "om@gmail.com",
+      "panNumber": "dfghj56567p",
+      "mobileNumber": "56565656",
+      "gender": "female",
+      "password": "om$34",
+      "id": 1
+    }
+  ],
+  "user": [],
+  "hotelDetails": [
+    {
+      "ownername": "poonam",
+      "ownermobile": "989898999",
+      "hotelname": "Hotel Taj ",
+      "hoteladdress": "Mumbai",
+      "hotelmobile": "9898966",
+      "rating": "5",
+      "room": "50",
+      "price": "2000",
+      "hotelimages": null,
+      "id": 1
+    },
+    {
+        "ownername": "poonam",
+        "ownermobile": "989898999",
+        "hotelname": "Hotel oyyo ",
+        "hoteladdress": "pune",
+        "hotelmobile": "9898966",
+        "rating": "5",
+        "room": "50",
+        "price": "2000",
+        "hotelimages": null,
+        "id": 1
+      },
+      {
+        "ownername": "poonam",
+        "ownermobile": "989898999",
+        "hotelname": "Hotel Menak ",
+        "hoteladdress": "Satara",
+        "hotelmobile": "9898966",
+        "rating": "5",
+        "room": "50",
+        "price": "2000",
+        "hotelimages": null,
+        "id": 1
+      },
+      {
+        "ownername": "ajay",
+        "ownermobile": "989898999",
+        "hotelname": "Hotel Shalini ",
+        "hoteladdress": "Panwel",
+        "hotelmobile": "9898966",
+        "rating": "5",
+        "room": "50",
+        "price": "2000",
+        "hotelimages": null,
+        "id": 1
+      },
+      {
+        "ownername": "pooja",
+        "ownermobile": "989898999",
+        "hotelname": "Hotel sonpari ",
+        "hoteladdress": "Sangli",
+        "hotelmobile": "9898966",
+        "rating": "5",
+        "room": "50",
+        "price": "2000",
+        "hotelimages": null,
+        "id": 1
+      }
+  ],
+  "hotelBooking": []
 }

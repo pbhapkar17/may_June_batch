@@ -5,7 +5,8 @@ import { LoginComponent } from './login/login.component';
 
 const routes: Routes = [
   { path: '', component: LandingComponent},
-  { path : "login", component: LoginComponent}
+  { path : "login", component: LoginComponent},
+  { path:'owner',loadChildren:()=>import('./owner/owner.module').then(mod=>mod.OwnerModule)},
 ];
 
 @NgModule({

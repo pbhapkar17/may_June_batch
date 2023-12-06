@@ -13,7 +13,7 @@ export class LandingComponent {
 
   }
   journey(journeyName: string){
-      this.dataService.journeyName = journeyName;
+      this.dataService.journeyName = "owner";
       this.router.navigateByUrl("login");
   }
 
