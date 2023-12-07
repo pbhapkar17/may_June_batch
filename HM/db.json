@@ -2,7 +2,7 @@
   "admin": [],
   "owner": [
     {
-      "userName": "Poonam",
+      "userName": "poonam",
       "email": "poonam@gmail.com",
       "panNumber": "gthff4444p",
       "mobileNumber": "98989898",
@@ -32,18 +32,52 @@
   "user": [],
   "hotelDetails": [
     {
-      "title": "test",
-      "author": "me",
-      "name": "pooja",
-      "address": "Pune",
-      "id": 1
+      "ownerName": "poonam",
+      "mobileNumber": "9898989888",
+      "hotelName": "Hotel Shivali",
+      "hotelAdress": "Mumbai",
+      "hotelNumber": "98989898",
+      "hotelMenu": "nonveg",
+      "rooms": "7",
+      "pass": "poonam$34",
+      "checkBox": "",
+      "id": 3
     },
     {
-      "title": "test",
-      "author": "me",
-      "name": "pooja",
-      "address": "Pune",
-      "id": 2
+      "ownerName": "poonam",
+      "mobileNumber": "9898989888",
+      "hotelName": "Hotel Taj",
+      "hotelAdress": "Mumbai",
+      "hotelNumber": "98989898",
+      "hotelMenu": "nonveg",
+      "rooms": "7",
+      "pass": "poonam$34",
+      "checkBox": "",
+      "id": 3
+    },
+    {
+      "ownerName": "poonam",
+      "mobileNumber": "9898989888",
+      "hotelName": "Hotel Sonpari",
+      "hotelAdress": "Mumbai",
+      "hotelNumber": "98989898",
+      "hotelMenu": "nonveg",
+      "rooms": "7",
+      "pass": "poonam$34",
+      "checkBox": "",
+      "id": 3
+    },
+    {
+      "ownerName": "pooja",
+      "mobileNumber": "9898989888",
+      "hotelName": "Hotel Sonpari",
+      "hotelAdress": "Mumbai",
+      "hotelNumber": "98989898",
+      "hotelMenu": "nonveg",
+      "rooms": "7",
+      "pass": "poonam$34",
+      "checkBox": "",
+      "id": 3
     }
   ],
   "hotelBooking": []

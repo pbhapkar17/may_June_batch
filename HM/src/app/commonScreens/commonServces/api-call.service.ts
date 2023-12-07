@@ -7,6 +7,7 @@ import { HttpClient } from '@angular/common/http';
 export class ApiCallService {
 
    url = "http://localhost:3000";
+  ownerName: any;
   constructor(private httpClient: HttpClient) { }
 
   postApiCall(endPoint: any, formData: any) {

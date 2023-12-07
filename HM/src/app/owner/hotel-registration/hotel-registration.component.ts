@@ -49,7 +49,7 @@ newHotelRegistration(){
     console.log("responce::>>",res); 
    // if(res){ 
       alert('Hotel registered Successfuly...!!'); 
-      this.router.navigateByUrl('/ownerMod/ownerSucces'); 
+      this.router.navigateByUrl('/owner/ownerSucces'); 
    // } 
   }) 
 } 

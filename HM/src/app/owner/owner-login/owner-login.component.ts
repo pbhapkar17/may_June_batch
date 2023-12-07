@@ -60,6 +60,7 @@ login(){
   }
 
   if(matchedObj){
+    this.apiCallService.ownerName = this.loginForm.value.userName;
     this.router.navigateByUrl('owner/ownerSuccess');
   }
   else{
