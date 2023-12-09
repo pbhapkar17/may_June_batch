@@ -6,8 +6,11 @@ import {MatIconModule} from '@angular/material/icon';
 import {MatRadioModule} from '@angular/material/radio';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { SearchPipe } from '../search.pipe';
 @NgModule({
-  declarations: [],
+  declarations: [
+    SearchPipe
+  ],
   imports: [
     CommonModule,
     FormsModule,
@@ -25,7 +28,8 @@ import { HttpClientModule } from '@angular/common/http';
     MatButtonModule,
     MatIconModule,
     MatRadioModule,
-    HttpClientModule
+    HttpClientModule,
+    SearchPipe
   ]
 })
 export class SharedModule { }

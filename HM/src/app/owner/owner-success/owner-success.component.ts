@@ -13,6 +13,7 @@ export class OwnerSuccessComponent {
   hotelDetailsByOwner!:any[];
   headings = ["Hotel Name","Hotel Address","Hotel Number","Hotel Menu","Room","Edit","Delete"];
   showRecord:boolean = false;
+  searchText:any;
   constructor(private router:Router,private apiCallService: ApiCallService,
     ){} 
 
@@ -59,7 +60,7 @@ getHotelByOwner(){
 
 
   delete(id: any) {
-
-    console.log("id", id);
+    this.apiCallService.deleteApiCall("hotelDetails", id).subscribe(res=>{})
+    this.showHotelDetails();
   }
 }

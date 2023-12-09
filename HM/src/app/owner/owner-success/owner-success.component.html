@@ -2,13 +2,14 @@
     <button>Back</button>
     <button routerLink="/owner/hotelReg">New hotel Registration</button>
     <button (click)="showHotelDetails()">Hotel List</button>
+    <input type="search" [(ngModel)]="searchText">
 </div>
 <div *ngIf="showRecord">
     <table>
         <tr>
             <th *ngFor="let heading of headings"> {{heading}}</th>
         </tr>
-        <tr *ngFor="let data of hotelDetailsByOwner">
+        <tr *ngFor="let data of hotelDetailsByOwner | search: searchText">
             <td>{{data.hotelName}}</td>
             <td>{{data.hotelAdress}}</td>
             <td>{{data.hotelNumber}}</td>

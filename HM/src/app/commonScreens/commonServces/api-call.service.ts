@@ -5,7 +5,8 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root'
 })
 export class ApiCallService {
-
+ 
+ 
    url = "http://localhost:3000";
   ownerName: any;
   recordById: any;
@@ -22,5 +23,13 @@ export class ApiCallService {
    let url = this.url + "/" + endPoint;
    return this.httpClient.get(url);
   }
+  patchApiCall(endPoint:any,id:any, formData:any) {
+    let url = this.url + "/" + endPoint + "/"+ id;
+    return this.httpClient.patch(url,formData);
+  }
 
+  deleteApiCall(endPoint:any, id:any) {
+    let url = this.url + "/" + endPoint + "/"+ id;
+    return this.httpClient.delete(url);
+  }
 }

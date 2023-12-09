@@ -27,22 +27,22 @@ ngOnInit(){
  
 formDetails(){ 
   this.newHoteRegister=this.fb.group({ 
-    ownerName:[this.recordById ? this.recordById[0].ownerName : '',Validators.required], 
+    ownerName:[this.recordById ? this.recordById[0]?.ownerName : '',Validators.required], 
     
    // midName:['',Validators.required], 
     // lastName:['',Validators.required], 
     // email:['',[Validators.required,Validators.pattern(/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/)]], 
     // panNumber:['',], 
-    mobileNumber: [this.recordById ? this.recordById[0].mobileNumber : '', [Validators.required, Validators.pattern('[0-9+]*')]], 
-    hotelName:[ this.recordById ? this.recordById[0].hotelName : '',Validators.required], 
-    hotelAdress:[this.recordById ? this.recordById[0].hotelAdress : '',Validators.required], 
-    hotelNumber:[this.recordById ? this.recordById[0].hotelNumber:'',[Validators.required, Validators.pattern('[0-9+]*')]], 
-    hotelMenu:[this.recordById ? this.recordById[0].hotelMenu :'',Validators.required], 
-    rooms:[this.recordById ? this.recordById[0].rooms:'',Validators.required], 
+    mobileNumber: [this.recordById ? this.recordById[0]?.mobileNumber : '', [Validators.required, Validators.pattern('[0-9+]*')]], 
+    hotelName:[ this.recordById ? this.recordById[0]?.hotelName : '',Validators.required], 
+    hotelAdress:[this.recordById ? this.recordById[0]?.hotelAdress : '',Validators.required], 
+    hotelNumber:[this.recordById ? this.recordById[0]?.hotelNumber:'',[Validators.required, Validators.pattern('[0-9+]*')]], 
+    hotelMenu:[this.recordById ? this.recordById[0]?.hotelMenu :'',Validators.required], 
+    rooms:[this.recordById ? this.recordById[0]?.rooms:'',Validators.required], 
     // gender:['',Validators.required], 
     // userName: ['', [Validators.required, Validators.pattern('^[a-zA-Z0-9]*$')]], 
-    pass: [this.recordById ? this.recordById[0].pass :'', [Validators.required, Validators.minLength(8)]], 
-    checkBox:[this.recordById ? this.recordById[0].checkBox :'',Validators.required] 
+    pass: [this.recordById ? this.recordById[0]?.pass :'', [Validators.required, Validators.minLength(8)]], 
+    checkBox:[this.recordById ? this.recordById[0]?.checkBox :'',Validators.required] 
   }) 
 } 
  
@@ -60,6 +60,14 @@ newHotelRegistration(){
 } 
 
 update(){
+  this.apiCallService.patchApiCall("hotelDetails",this.id,this.newHoteRegister.value).subscribe(res=>{
+
+  })
+  this.router.navigateByUrl("owner/ownerSuccess")
+}
+ngOnDestroy(){
+  console.log("destroy");
   
+  this.apiCallService.recordById=[];
 }
 }
