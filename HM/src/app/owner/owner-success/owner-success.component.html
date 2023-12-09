@@ -1,22 +1,21 @@
 <div>
     <button>Back</button>
     <button routerLink="/owner/hotelReg">New hotel Registration</button>
-    <button (click)="showHotelDetails()" >Hotel List</button>
+    <button (click)="showHotelDetails()">Hotel List</button>
 </div>
 <div *ngIf="showRecord">
-<table>
-    <tr >
-        <th *ngFor="let heading of headings"> {{heading}}</th>
-    </tr>
-    <tr *ngFor="let data of hotelDetailsByOwner">
-        <td>{{data.hotelName}}</td>
-        <td>{{data.hotelAdress}}</td>
-        <td>{{data.hotelNumber}}</td>
-        <td>{{data.hotelMenu}}</td>
-        <td>{{data.rooms}}</td>
-        <td (click)="edit(data.id)">edit</td>
-        <td (click)="delete(data.id)">delete</td>
-    </tr>
-</table>
+    <table>
+        <tr>
+            <th *ngFor="let heading of headings"> {{heading}}</th>
+        </tr>
+        <tr *ngFor="let data of hotelDetailsByOwner">
+            <td>{{data.hotelName}}</td>
+            <td>{{data.hotelAdress}}</td>
+            <td>{{data.hotelNumber}}</td>
+            <td>{{data.hotelMenu}}</td>
+            <td>{{data.rooms}}</td>
+            <td><mat-icon (click)="edit(data.id)">create</mat-icon></td>
+            <td><mat-icon (click)="delete(data.id)">delete</mat-icon></td>
+        </tr>
+    </table>
 </div>
-

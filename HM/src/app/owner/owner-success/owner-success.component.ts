@@ -11,13 +11,14 @@ export class OwnerSuccessComponent {
   hotelDetails:any;
   ownerName:any;
   hotelDetailsByOwner!:any[];
-  headings = ["Hotel Name","Hotel Address","Hotel Number","Hotel Menu","Room"];
+  headings = ["Hotel Name","Hotel Address","Hotel Number","Hotel Menu","Room","Edit","Delete"];
   showRecord:boolean = false;
   constructor(private router:Router,private apiCallService: ApiCallService,
     ){} 
 
 ngOnInit(){
 this.ownerName =  this.apiCallService.ownerName;
+
 }
 
 
@@ -42,10 +43,23 @@ getHotelByOwner(){
 }
 
 
-edit(id:any){
+  edit(id: any) {
+    let recordById:any = [];
+    console.log("id", id);
+    this.hotelDetails.forEach((ele:any)=>{
+       if(ele.id == id) {
+        recordById.push(ele)
+       }
+    })
+    console.log("record ",recordById);
+    this.apiCallService.recordById = recordById;
+    this.apiCallService.id = id;
+    this.router.navigateByUrl('owner/hotelReg')
+  }
 
-}
-delete(id:any){
 
-}
+  delete(id: any) {
+
+    console.log("id", id);
+  }
 }
