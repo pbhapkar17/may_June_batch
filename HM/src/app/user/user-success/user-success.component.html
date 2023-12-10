@@ -1,0 +1,19 @@
+<p>user-success works!</p>
+<button click="showHotels()">Show hotels</button>
+
+<div *ngIf="showRecord">
+    <table>
+        <tr>
+            <th *ngFor="let heading of headings"> {{heading}}</th>
+        </tr>
+        <tr *ngFor="let data of hotelsList | search: searchText">
+            <td>{{data.hotelName}}</td>
+            <td>{{data.hotelAdress}}</td>
+            <td>{{data.hotelNumber}}</td>
+            <td>{{data.hotelMenu}}</td>
+            <td>{{data.rooms}}</td>
+            <td><mat-icon routerLink="/user/hotelBooking">Book Now</mat-icon></td>
+            
+        </tr>
+    </table>
+</div>

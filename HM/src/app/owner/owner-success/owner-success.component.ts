@@ -14,6 +14,7 @@ export class OwnerSuccessComponent {
   headings = ["Hotel Name","Hotel Address","Hotel Number","Hotel Menu","Room","Edit","Delete"];
   showRecord:boolean = false;
   searchText:any;
+
   constructor(private router:Router,private apiCallService: ApiCallService,
     ){} 
 
@@ -63,4 +64,5 @@ getHotelByOwner(){
     this.apiCallService.deleteApiCall("hotelDetails", id).subscribe(res=>{})
     this.showHotelDetails();
   }
+  
 }
