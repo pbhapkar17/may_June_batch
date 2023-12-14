@@ -41,7 +41,18 @@ export class OwnerSigUpComponent {
   }
 
   submit() {
-    this.apiCallService.postApiCall(this.endPoint,this.sinupForm.value).subscribe(res=>{})
+    let payload = {
+      user_name : this.sinupForm.value.userName,
+      email : this.sinupForm.value.email,
+      pan_number :this.sinupForm.value.panNumber,
+      mob_no: this.sinupForm.value.mobileNumber.toString(),
+      password: this.sinupForm.value.password,
+      gender : this.sinupForm.value.gender,
+      limit:10,
+      offset:1
+    }
+    
+    this.apiCallService.postApiCall(this.endPoint,payload ).subscribe(res=>{})
     this.router.navigateByUrl('/owner/ownerSuccess');
   }
 

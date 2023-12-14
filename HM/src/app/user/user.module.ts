@@ -6,6 +6,7 @@ import { UserLoginComponent } from './user-login/user-login.component';
 import { SignupComponent } from './signup/signup.component';
 import { HotelbookingComponent } from './hotelbooking/hotelbooking.component';
 import { UserSuccessComponent } from './user-success/user-success.component';
+import { SharedModule } from '../shared/shared.module';
 
 
 @NgModule({
@@ -17,7 +18,8 @@ import { UserSuccessComponent } from './user-success/user-success.component';
   ],
   imports: [
     CommonModule,
-    UserRoutingModule
+    UserRoutingModule,
+    SharedModule
   ]
 })
 export class UserModule { }

@@ -7,9 +7,13 @@ import {MatRadioModule} from '@angular/material/radio';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { SearchPipe } from '../search.pipe';
+import {MatSnackBarModule} from '@angular/material/snack-bar';
+import { SnackbarComponent } from '../snackbar/snackbar.component';
+
 @NgModule({
   declarations: [
-    SearchPipe
+    SearchPipe,
+    SnackbarComponent
   ],
   imports: [
     CommonModule,
@@ -19,7 +23,8 @@ import { SearchPipe } from '../search.pipe';
     MatButtonModule,
     MatIconModule,
     MatRadioModule,
-    HttpClientModule
+    HttpClientModule,
+    MatSnackBarModule
   ],
   exports:[
     FormsModule,
@@ -29,7 +34,9 @@ import { SearchPipe } from '../search.pipe';
     MatIconModule,
     MatRadioModule,
     HttpClientModule,
-    SearchPipe
+    SearchPipe,
+    MatSnackBarModule,
+    SnackbarComponent
   ]
 })
 export class SharedModule { }

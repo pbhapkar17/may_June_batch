@@ -1,7 +1,9 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { MatSnackBar } from '@angular/material/snack-bar';
 import { Router } from '@angular/router';
 import { ApiCallService } from 'src/app/commonScreens/commonServces/api-call.service';
+import { SnackbarComponent } from 'src/app/snackbar/snackbar.component';
 
 @Component({
   selector: 'app-hotel-registration',
@@ -12,10 +14,11 @@ export class HotelRegistrationComponent {
   newHoteRegister!:FormGroup 
   id:any;
   recordById:any;
-  
+  durationInSeconds = 5;
+
   constructor(private fb:FormBuilder ,
     private apiCallService:ApiCallService,
-    private router:Router){} 
+    private router:Router, private matSnackBar: MatSnackBar){} 
     
 ngOnInit(){ 
  this.id = this.apiCallService.id;
@@ -53,7 +56,10 @@ newHotelRegistration(){
   this.apiCallService.postApiCall(endPoint,this.newHoteRegister.value).subscribe(res=>{ 
     console.log("responce::>>",res); 
    // if(res){ 
-      alert('Hotel registered Successfuly...!!'); 
+      // alert('Hotel registered Successfuly...!!'); 
+      this.matSnackBar.openFromComponent(SnackbarComponent, {
+        duration: this.durationInSeconds * 1000,
+      });
       this.router.navigateByUrl('/owner/ownerSucces'); 
    // } 
   }) 

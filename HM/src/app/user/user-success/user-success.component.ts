@@ -12,7 +12,7 @@ export class UserSuccessComponent {
   hotelsList:any;
   showRecord=false;
   headings = ["Hotel Name","Hotel Address","Hotel Number","Hotel Menu","Room","Edit","Delete"];
- 
+  searchText:any
   constructor(private router:Router,private apiCallService: ApiCallService){}
 
     async showHotels(){
