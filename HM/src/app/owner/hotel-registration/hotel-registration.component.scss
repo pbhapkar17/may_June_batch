@@ -20,3 +20,7 @@
      left: 0px; 
     margin: auto; 
   }
+
+  ::ng-deep .cdk-overlay-container .cdk-global-overlay-wrapper .cdk-overlay-pane .mdc-snackbar.mat-mdc-snack-bar-container.mdc-snackbar--open {
+    background-color: green !important;
+  }

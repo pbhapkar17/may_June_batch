@@ -93,8 +93,8 @@
        </div>  -->
        
  
-       <button *ngIf="recordById.length == 0" mat-raised-button color="accent" (click)="newHotelRegistration()" >Submit</button> 
-       <button *ngIf="recordById.length > 0" mat-raised-button color="accent" (click)="update()" >Update</button> 
+       <button *ngIf="new" mat-raised-button color="accent" (click)="newHotelRegistration()" >Submit</button> 
+       <button *ngIf="!new" mat-raised-button color="accent" (click)="update()" >Update</button> 
    </div> 
 </form> 
 </div>

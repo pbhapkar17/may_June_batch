@@ -15,7 +15,7 @@ export class HotelRegistrationComponent {
   id:any;
   recordById:any;
   durationInSeconds = 5;
-
+new:any;
   constructor(private fb:FormBuilder ,
     private apiCallService:ApiCallService,
     private router:Router, private matSnackBar: MatSnackBar){} 
@@ -23,6 +23,7 @@ export class HotelRegistrationComponent {
 ngOnInit(){ 
  this.id = this.apiCallService.id;
  this.recordById = this.apiCallService.recordById;
+ this.new = this.apiCallService.new
  console.log(this.id,this.recordById);
  
   this.formDetails();
@@ -58,11 +59,14 @@ newHotelRegistration(){
    // if(res){ 
       // alert('Hotel registered Successfuly...!!'); 
       this.matSnackBar.openFromComponent(SnackbarComponent, {
-        duration: this.durationInSeconds * 1000,
+        duration: this.durationInSeconds * 10000,
+        verticalPosition: 'top',
+        panelClass: ['positioned-snackbar']
       });
-      this.router.navigateByUrl('/owner/ownerSucces'); 
+      this.router.navigateByUrl('owner/ownerSuccess'); 
    // } 
   }) 
+
 } 
 
 update(){
@@ -73,7 +77,7 @@ update(){
 }
 ngOnDestroy(){
   console.log("destroy");
-  
+  this.apiCallService.new = false;
   this.apiCallService.recordById=[];
 }
 }

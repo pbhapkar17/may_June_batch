@@ -64,5 +64,7 @@ getHotelByOwner(){
     this.apiCallService.deleteApiCall("hotelDetails", id).subscribe(res=>{})
     this.showHotelDetails();
   }
-  
+  new(){
+    this.apiCallService.new = true;
+  }
 }

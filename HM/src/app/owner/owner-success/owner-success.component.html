@@ -1,6 +1,6 @@
 <div>
     <button>Back</button>
-    <button routerLink="/owner/hotelReg">New hotel Registration</button>
+    <button routerLink="/owner/hotelReg" (click)="new()">New hotel Registration</button>
     <button (click)="showHotelDetails()">Hotel List</button>
     <input type="search" [(ngModel)]="searchText">
 </div>
